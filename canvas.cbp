@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Canvas C++" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="src\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../__bin/Debug/canvas" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option object_output="../__obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="src" />
+					<Add directory="src/Entities" />
+					<Add directory="src/Managers" />
+					<Add directory="src/Entities/Character" />
+					<Add directory="src/UI" />
+					<Add directory="src/Utils" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../__bin/Release/canvas" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
+				<Option object_output="../__obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-O2 -Wall" />
+					<Add directory="include" />
+					<Add directory="src" />
+					<Add directory="src/Entities" />
+					<Add directory="src/Managers" />
+					<Add directory="src/Entities/Character" />
+					<Add directory="src/UI" />
+					<Add directory="src/Utils" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add library="../lib/libglu32.a" />
+			<Add library="../lib/libopengl32.a" />
+			<Add library="../lib/freeglut.lib" />
+		</Linker>
+		<Unit filename="src/Builder/CharacterBuilder.cpp" />
+		<Unit filename="src/Builder/CharacterBuilder.h" />
+		<Unit filename="src/CharacterHUD.cpp" />
+		<Unit filename="src/Controller/PlayerController.cpp" />
+		<Unit filename="src/Controller/PlayerController.h" />
+		<Unit filename="src/Entities/Abstract/Renderable.cpp" />
+		<Unit filename="src/Entities/Abstract/Renderable.h" />
+		<Unit filename="src/Entities/Character/Character.cpp" />
+		<Unit filename="src/Entities/Character/Character.h" />
+		<Unit filename="src/Entities/Character/Modifier.cpp" />
+		<Unit filename="src/Entities/Character/Modifier.h" />
+		<Unit filename="src/Entities/Character/PlayerCharacter.cpp" />
+		<Unit filename="src/Entities/Character/PlayerCharacter.h" />
+		<Unit filename="src/Entities/Character/ShipPart.cpp" />
+		<Unit filename="src/Entities/Character/ShipPart.h" />
+		<Unit filename="src/Entities/Character/Slot.cpp" />
+		<Unit filename="src/Entities/Character/Slot.h" />
+		<Unit filename="src/Entities/Entity.cpp" />
+		<Unit filename="src/Entities/Entity.h" />
+		<Unit filename="src/Entities/Particle.cpp" />
+		<Unit filename="src/Entities/Particle.h" />
+		<Unit filename="src/Entities/Poly.cpp" />
+		<Unit filename="src/Entities/Poly.h" />
+		<Unit filename="src/Entities/Weapon/HoomingProjectile.cpp" />
+		<Unit filename="src/Entities/Weapon/HoomingProjectile.h" />
+		<Unit filename="src/Entities/Weapon/Projectile.cpp" />
+		<Unit filename="src/Entities/Weapon/Projectile.h" />
+		<Unit filename="src/Entities/Weapon/Weapon.cpp" />
+		<Unit filename="src/Entities/Weapon/Weapon.h" />
+		<Unit filename="src/Managers/CameraManager.cpp" />
+		<Unit filename="src/Managers/CameraManager.h" />
+		<Unit filename="src/Managers/CollisionManager.cpp" />
+		<Unit filename="src/Managers/CollisionManager.h" />
+		<Unit filename="src/Managers/FPSManager.cpp" />
+		<Unit filename="src/Managers/FPSManager.h" />
+		<Unit filename="src/Managers/FileManager.cpp" />
+		<Unit filename="src/Managers/FileManager.h" />
+		<Unit filename="src/Managers/Frames.h" />
+		<Unit filename="src/Managers/MouseManager.cpp" />
+		<Unit filename="src/Managers/MouseManager.h" />
+		<Unit filename="src/Managers/PlayerManager.cpp" />
+		<Unit filename="src/Managers/PlayerManager.h" />
+		<Unit filename="src/Managers/RenderManager.cpp" />
+		<Unit filename="src/Managers/RenderManager.h" />
+		<Unit filename="src/Managers/UIManager.cpp" />
+		<Unit filename="src/Managers/UIManager.h" />
+		<Unit filename="src/UIEntity.cpp" />
+		<Unit filename="src/UI/CharacterHUD.h" />
+		<Unit filename="src/UI/CharacterStatsFrameUI.cpp" />
+		<Unit filename="src/UI/CharacterStatsFrameUI.h" />
+		<Unit filename="src/UI/UIEntity.h" />
+		<Unit filename="src/Utils/Curves.cpp" />
+		<Unit filename="src/Utils/Curves.h" />
+		<Unit filename="src/Utils/GeometryAux.cpp" />
+		<Unit filename="src/Utils/GeometryAux.h" />
+		<Unit filename="src/Utils/Pnt2.cpp" />
+		<Unit filename="src/Utils/Pnt2.h" />
+		<Unit filename="src/Utils/Vec2.cpp" />
+		<Unit filename="src/Utils/Vec2.h" />
+		<Unit filename="src/gl_canvas2d.cpp" />
+		<Unit filename="src/gl_canvas2d.h" />
+		<Unit filename="src/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

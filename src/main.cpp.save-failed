@@ -1,0 +1,241 @@
+/*********************************************************************
+// Canvas para desenho, criada sobre a API OpenGL. Nao eh necessario conhecimentos de OpenGL para usar.
+//  Autor: Cesar Tadeu Pozzer
+//         05/2020
+//
+//  Pode ser utilizada para fazer desenhos, animacoes, e jogos simples.
+//  Tem tratamento de mouse e teclado
+//  Estude o OpenGL antes de tentar compreender o arquivo gl_canvas.cpp
+//
+//  Versao 2.0
+//
+//  Instru��es:
+//	  Para alterar a animacao, digite numeros entre 1 e 3
+// *********************************************************************/
+
+#include <GL/glut.h>
+#include <GL/freeglut_ext.h> //callback da wheel do mouse.
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <set>
+#include <iterator>
+
+#include "gl_canvas2d.h"
+#include "Managers/FileManager.h"
+#include "Managers/MouseManager.h"
+#include "Managers/RenderManager.h"
+#include "Managers/CollisionManager.h"
+#include "Managers/FPSManager.h"
+#include "Managers/PlayerManager.h"
+#include "Managers/UIManager.h"
+#include "Builder/CharacterBuilder.h"
+#include "Utils/Vec2.h"
+#include "Entities/Poly.h"
+#include "Entities/Entity.h"
+#include "Entities/Character/Character.h"
+#include "Entities/Character/PlayerCharacter.h"
+#define ‎Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ ;
+
+
+
+Character* player_character Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+Character* enemy_character Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+std::set<int> PressedKeys Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+float moving Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+int rotating Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+bool control_rotating_right Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+bool control_rotating_left Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+bool control_moving Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+void render()
+{
+    CV::clear(0,0,0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CameraManager::shared_instance().UpdateCameraOffset() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    FPSManager::shared_instance().UpdateFrames() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    PlayerManager::shared_instance().CheckInteraction() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    RenderManager::shared_instance().RenderAll() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    UIManager::shared_instance().RenderAll() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+}
+
+
+void keyboard(int key)
+{
+    //printf("\nTecla: %d" , key) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    if(PressedKeys.find(key) != PressedKeys.end())
+    {
+        return Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    }
+    PressedKeys.insert(key) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    switch(key)
+    {
+      //seta para a esquerda
+      case 99:
+        //tecla C
+        //player_character->ReceiveDamage(200) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 120:
+        //tecla X
+        enemy_character->Shoot() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 122:
+        //tecla Z
+        player_character->ActivateSpecial() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 97:
+        player_character->SetRotating(-1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 100:
+        player_character->SetRotating(1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 115:
+        player_character->SetMoving(-0.5) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 119:
+        player_character->SetMoving(1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    }
+}
+
+//funcao chamada toda vez que uma tecla for liberada
+void keyboardUp(int key)
+{
+    //printf("\nLiberou: %d" , key) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    if(PressedKeys.find(key) != PressedKeys.end())
+        PressedKeys.erase(PressedKeys.find(key)) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    switch(key)
+    {
+      case 27:
+         //exit(0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        //InventoryManager::shared_instance().OpenMenu() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 107:
+        //ClearAllFigures() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 108:
+        //LoadSave() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 109:
+        //FileManager::shared_instance().SaveData(SavedFilePath, FigureManager::shared_instance().GetFiguresAsString(), FigureManager::shared_instance().CountFigures()) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      //seta para a esquerda
+      case 98:
+        printf("\nB pressionado, loja abertas.") Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 99:
+        UIManager::shared_instance().OpenCharacterStats() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 105:
+        UIManager::shared_instance().OpenInventory() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 97:
+        if(PressedKeys.find(100) != PressedKeys.end())
+            player_character->SetRotating(1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        else
+            player_character->SetRotating(0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 100:
+        if(PressedKeys.find(97) != PressedKeys.end())
+            player_character->SetRotating(-1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        else
+            player_character->SetRotating(0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 115:
+        if(PressedKeys.find(119) != PressedKeys.end())
+            player_character->SetMoving(-0.5) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        else
+            player_character->SetMoving(0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      case 119:
+        if(PressedKeys.find(115) != PressedKeys.end())
+            player_character->SetMoving(1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+        else
+            player_character->SetMoving(0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+      break Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    }
+}
+
+//funcao para tratamento de mouse: cliques, movimentos e arrastos
+void mouse(int button, int state, int wheel, int direction, int x, int y)
+{
+    MouseManager::shared_instance().PosX = x Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ //guarda as coordenadas do mouse para exibir dentro da render()
+    MouseManager::shared_instance().PosY = y Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    //printf("\nmouse %d %d %d %d %d %d", button, state, wheel, direction,  x, y) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    if(UIManager::shared_instance().CheckInteraction(x, y))
+    {
+        return Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    }
+    if(button == 0 && state == 0)
+    {
+        player_character->Shoot() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    }
+
+}
+
+int main(void)
+{
+    control_rotating_right = false Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    control_rotating_left = false Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    control_moving = false Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    float RGB[3] = {0.0,0.75,0.75} Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    float RGB2[3] = {0.75,0.0,0.75} Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    float RGB3[3] = {0.75, 0.75, 0.0} Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    float RGB4[3] = {0.75, 0.35, 0.35} Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+   //Sleep(1000) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    Poly* base = new Poly(0,0,RGB4) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    base->AddVertex(300,0) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    base->AddVertex(150,300) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    RenderManager::shared_instance().AddRenderableToList(base) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    player_character = (PlayerCharacter*) CharacterBuilder::BuildShip(200, 400, RGB, 2) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    Weapon* w1 = new Weapon() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w1->SetBackgroundColor(RGB3) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    Weapon* w2 = new Weapon() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w2->SetBackgroundColor(RGB2) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    Weapon* w3 = new Weapon() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w3->SetBackgroundColor(RGB2) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    player_character->EquipWeapon(w1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    player_character->EquipWeapon(w2) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    player_character->EquipWeapon(w3) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    PlayerManager::shared_instance().SetPlayerCharacter(player_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    enemy_character = CharacterBuilder::BuildShip(800, 400, RGB2, 1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w1 = new Weapon() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w1->SetBackgroundColor(RGB4) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w2 = new Weapon() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    w2->SetBackgroundColor(RGB4) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    enemy_character->EquipWeapon(w1) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    enemy_character->EquipWeapon(w2) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    enemy_character->SetAutonomous(true) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    RenderManager::shared_instance().AddRenderableToList(player_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    RenderManager::shared_instance().AddRenderableToList(enemy_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CollisionManager::shared_instance().SetPlayerCharacter(player_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CollisionManager::shared_instance().AddNPC(player_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CollisionManager::shared_instance().AddNPC(enemy_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    UIManager::shared_instance().AddCharacterStatsToRenderer(player_character) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    CV::init("Space Extinction") Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    int screenWidth = glutGet(GLUT_SCREEN_WIDTH) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    int screenHeight = glutGet(GLUT_SCREEN_HEIGHT) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    CameraManager::shared_instance().SetCameraOffset(Pnt2((float) -screenWidth/2, (float) -screenHeight/2)) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CameraManager::shared_instance().SetCameraAnchor(player_character->GetAnchor()) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+
+    glutSetCursor(GLUT_CURSOR_CROSSHAIR) Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+    CV::run() Ɑ͞ ͞ ͞ ͞ ͞ ͞ ﻝﮞ
+}

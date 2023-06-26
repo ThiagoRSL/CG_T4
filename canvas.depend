@@ -1,0 +1,1344 @@
+# depslib dependency file v1.0
+1682961460 source:c:\users\nektus\desktop\grad\cg_gametest\src\character.cpp
+	"Character.h"
+
+1682960995 c:\users\nektus\desktop\grad\cg_gametest\src\character.h
+	<math.h>
+	"Poly.h"
+	"Projectile.h"
+
+1682791597 c:\users\nektus\desktop\grad\cg_gametest\src\poly.h
+	<stdio.h>
+	<vector>
+	"Vec2.h"
+	"RenderManager.h"
+	"CollisionManager.h"
+	"GeometryAux.h"
+
+1682798683 c:\users\nektus\desktop\grad\cg_gametest\src\vec2.h
+	<math.h>
+	"Renderable.h"
+	"gl_canvas2d.h"
+	"Pnt2.h"
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\src\renderable.h
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\include\gl\glut.h
+	"freeglut_std.h"
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1682736961 c:\users\nektus\desktop\grad\cg_gametest\src\pnt2.h
+
+1682790209 c:\users\nektus\desktop\grad\cg_gametest\src\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"MouseManager.h"
+	"Renderable.h"
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\src\mousemanager.h
+
+1682805963 c:\users\nektus\desktop\grad\cg_gametest\src\collisionmanager.h
+	<vector>
+
+1682875165 c:\users\nektus\desktop\grad\cg_gametest\src\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1682795770 c:\users\nektus\desktop\grad\cg_gametest\src\projectile.h
+	"FPSManager.h"
+	"Poly.h"
+
+1682744585 c:\users\nektus\desktop\grad\cg_gametest\src\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1682809832 source:c:\users\nektus\desktop\grad\cg_gametest\src\collisionmanager.cpp
+	"CollisionManager.h"
+	"Character.h"
+
+1682730034 source:c:\users\nektus\desktop\grad\cg_gametest\src\filemanager.cpp
+	"FileManager.h"
+
+1682730034 c:\users\nektus\desktop\grad\cg_gametest\src\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1682744541 source:c:\users\nektus\desktop\grad\cg_gametest\src\fpsmanager.cpp
+	"FPSManager.h"
+
+1682875146 source:c:\users\nektus\desktop\grad\cg_gametest\src\geometryaux.cpp
+	"GeometryAux.h"
+
+1682737183 source:c:\users\nektus\desktop\grad\cg_gametest\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1682959830 source:c:\users\nektus\desktop\grad\cg_gametest\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	"gl_canvas2d.h"
+	"FileManager.h"
+	"MouseManager.h"
+	"RenderManager.h"
+	"CollisionManager.h"
+	"Vec2.h"
+	"Poly.h"
+	"FPSManager.h"
+	"Character.h"
+
+1682730034 source:c:\users\nektus\desktop\grad\cg_gametest\src\mousemanager.cpp
+	"MouseManager.h"
+
+1682737103 source:c:\users\nektus\desktop\grad\cg_gametest\src\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1682792993 source:c:\users\nektus\desktop\grad\cg_gametest\src\poly.cpp
+	"Poly.h"
+
+1682807980 source:c:\users\nektus\desktop\grad\cg_gametest\src\projectile.cpp
+	"Projectile.h"
+	"Character.h"
+
+1682730034 source:c:\users\nektus\desktop\grad\cg_gametest\src\renderable.cpp
+	"Renderable.h"
+
+1682791094 source:c:\users\nektus\desktop\grad\cg_gametest\src\rendermanager.cpp
+	"RenderManager.h"
+
+1682735500 source:c:\users\nektus\desktop\grad\cg_gametest\src\vec2.cpp
+	"Vec2.h"
+
+1683047889 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\character.cpp
+	"Character.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\character.h
+	<math.h>
+	"Poly.h"
+	"Projectile.h"
+
+1683337643 c:\users\thiago\desktop\grad\cg\cg_gametest\src\poly.h
+	<stdio.h>
+	<vector>
+	"Vec2.h"
+	"RenderManager.h"
+	"CollisionManager.h"
+	"GeometryAux.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\vec2.h
+	<math.h>
+	"Renderable.h"
+	"gl_canvas2d.h"
+	"Pnt2.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\renderable.h
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\include\gl\glut.h
+	"freeglut_std.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\pnt2.h
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"MouseManager.h"
+	"Renderable.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\mousemanager.h
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\collisionmanager.h
+	<vector>
+
+1683047755 c:\users\thiago\desktop\grad\cg\cg_gametest\src\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\projectile.h
+	"FPSManager.h"
+	"Poly.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\collisionmanager.cpp
+	"CollisionManager.h"
+	"Character.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\filemanager.cpp
+	"FileManager.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\cg_gametest\src\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\fpsmanager.cpp
+	"FPSManager.h"
+
+1683338857 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1683340188 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	<vector>
+	"gl_canvas2d.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\mousemanager.cpp
+	"MouseManager.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1683339278 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\poly.cpp
+	"Poly.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\projectile.cpp
+	"Projectile.h"
+	"Character.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\renderable.cpp
+	"Renderable.h"
+
+1683339950 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\rendermanager.cpp
+	"RenderManager.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\vec2.cpp
+	"Vec2.h"
+
+1683047694 source:c:\users\thiago\desktop\grad\cg\cg_gametest\src\geometryaux.cpp
+	"GeometryAux.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1684416283 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\include\gl\glut.h
+	"freeglut_std.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1684519229 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	"gl_canvas2d.h"
+	"Managers/FileManager.h"
+	"Managers/MouseManager.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/FPSManager.h"
+	"Managers/PlayerManager.h"
+	"Builder/CharacterBuilder.h"
+	"Utils/Vec2.h"
+	"Entities/Poly.h"
+	"Entities/Entity.h"
+	"Entities/Character/Character.h"
+	"Entities/Character/PlayerCharacter.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\mousemanager.h
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"MouseManager.h"
+	"Renderable.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\renderable.h
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\collisionmanager.h
+	<vector>
+
+1684183760 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\vec2.h
+	<math.h>
+	"Renderable.h"
+	"gl_canvas2d.h"
+	"Pnt2.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\pnt2.h
+
+1684182485 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\poly.h
+	<stdio.h>
+	<vector>
+	"Vec2.h"
+	"RenderManager.h"
+	"CollisionManager.h"
+	"GeometryAux.h"
+
+1684182082 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1684180125 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\character.h
+	<math.h>
+	"Poly.h"
+	"Weapon.h"
+	"Projectile.h"
+
+1683029880 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\projectile.h
+	"FPSManager.h"
+	"Poly.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\collisionmanager.cpp
+	"CollisionManager.h"
+	"Character.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\filemanager.cpp
+	"FileManager.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\fpsmanager.cpp
+	"FPSManager.h"
+
+1684182223 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\geometryaux.cpp
+	"GeometryAux.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\mousemanager.cpp
+	"MouseManager.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1684182317 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\poly.cpp
+	"Poly.h"
+
+1684174455 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\projectile.cpp
+	"Projectile.h"
+	"Character.h"
+
+1683029880 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\renderable.cpp
+	"Renderable.h"
+
+1683339950 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\rendermanager.cpp
+	"RenderManager.h"
+
+1684183785 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1684184004 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\character.cpp
+	"Character.h"
+
+1684180103 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\playercharacter.cpp
+	"PlayerCharacter.h"
+
+1684172582 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\playercharacter.h
+	<Character.h>
+
+1684180224 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\weapon.h
+	<Poly.h>
+
+1684180805 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\weapon.cpp
+	"Weapon.h"
+	"Character.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\collisionmanager.cpp
+	"CollisionManager.h"
+	"Character.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\collisionmanager.h
+	<vector>
+
+1684199647 c:\users\nektus\desktop\cg\cg_t3\src\character.h
+	<math.h>
+	"Poly.h"
+	"Weapon.h"
+	"Projectile.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\poly.h
+	<stdio.h>
+	<vector>
+	"Vec2.h"
+	"RenderManager.h"
+	"CollisionManager.h"
+	"GeometryAux.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\vec2.h
+	<math.h>
+	"Renderable.h"
+	"gl_canvas2d.h"
+	"Pnt2.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\renderable.h
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\include\gl\glut.h
+	"freeglut_std.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\pnt2.h
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"MouseManager.h"
+	"Renderable.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\mousemanager.h
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1684199788 c:\users\nektus\desktop\cg\cg_t3\src\weapon.h
+	<Poly.h>
+	<Projectile.h>
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\projectile.h
+	"FPSManager.h"
+	"Poly.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\filemanager.cpp
+	"FileManager.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\fpsmanager.cpp
+	"FPSManager.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\geometryaux.cpp
+	"GeometryAux.h"
+
+1686703810 source:c:\users\nektus\desktop\cg\cg_t3\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1686710601 source:c:\users\nektus\desktop\cg\cg_t3\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	<cstdlib>
+	<iostream>
+	"gl_canvas2d.h"
+	"Managers/FileManager.h"
+	"Managers/MouseManager.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/FPSManager.h"
+	"Managers/PlayerManager.h"
+	"Managers/UIManager.h"
+	"Builder/CharacterBuilder.h"
+	"Utils/Vec2.h"
+	"Entities/Poly.h"
+	"Entities/Entity.h"
+	"Entities/Character/Character.h"
+	"Entities/Character/PlayerCharacter.h"
+	"Utils/Curves.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\src\playercharacter.h
+	<Character.h>
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\mousemanager.cpp
+	"MouseManager.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\playercharacter.cpp
+	"PlayerCharacter.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\poly.cpp
+	"Poly.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\projectile.cpp
+	"Projectile.h"
+	"Character.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\renderable.cpp
+	"Renderable.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\rendermanager.cpp
+	"RenderManager.h"
+
+1684198249 source:c:\users\nektus\desktop\cg\cg_t3\src\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1684199623 source:c:\users\nektus\desktop\cg\cg_t3\src\character.cpp
+	"Character.h"
+
+1684199760 source:c:\users\nektus\desktop\cg\cg_t3\src\weapon.cpp
+	"Weapon.h"
+	"Character.h"
+
+1684198249 c:\users\nektus\desktop\cg\cg_t3\include\playercharacter.h
+
+1685149226 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\abstract\renderable.cpp
+	"Renderable.h"
+	"Utils/Vec2.h"
+
+1686700952 c:\users\nektus\desktop\cg\cg_t3\src\entities\abstract\renderable.h
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Utils/Pnt2.h"
+	"Managers/CameraManager.h"
+
+1684550669 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\filemanager.cpp
+	"FileManager.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\managers\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1684550669 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\fpsmanager.cpp
+	"FPSManager.h"
+
+1684986551 c:\users\nektus\desktop\cg\cg_t3\src\managers\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1684550669 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\mousemanager.cpp
+	"MouseManager.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\managers\mousemanager.h
+
+1684550669 source:c:\users\nektus\desktop\cg\cg_t3\src\utils\geometryaux.cpp
+	"GeometryAux.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\utils\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1686689107 c:\users\nektus\desktop\cg\cg_t3\src\utils\pnt2.h
+
+1686689107 source:c:\users\nektus\desktop\cg\cg_t3\src\utils\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1685148094 c:\users\nektus\desktop\cg\cg_t3\src\utils\vec2.h
+	<math.h>
+	"Entities/Abstract/Renderable.h"
+	"gl_canvas2d.h"
+	"Utils/Pnt2.h"
+
+1685149129 source:c:\users\nektus\desktop\cg\cg_t3\src\utils\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1686710537 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\character\character.cpp
+	"Character.h"
+	"PlayerManager.h"
+	"UIManager.h"
+	"Entities/Weapon/HoomingProjectile.h"
+
+1686707988 c:\users\nektus\desktop\cg\cg_t3\src\entities\character\character.h
+	<math.h>
+	<vector>
+	<map>
+	"Utils/Pnt2.h"
+	"Entities/Entity.h"
+	"ShipPart.h"
+	"Slot.h"
+	"Entities/Weapon/Weapon.h"
+	"Entities/Weapon/Projectile.h"
+	"Particle.h"
+
+1685147655 c:\users\nektus\desktop\cg\cg_t3\src\entities\poly.h
+	<stdio.h>
+	<vector>
+	"Utils/Vec2.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/CameraManager.h"
+	"Utils/GeometryAux.h"
+
+1686699391 c:\users\nektus\desktop\cg\cg_t3\src\managers\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"Managers/MouseManager.h"
+	"Entities/Abstract/Renderable.h"
+	"Utils/GeometryAux.h"
+
+1686707616 c:\users\nektus\desktop\cg\cg_t3\src\managers\collisionmanager.h
+	<vector>
+	<map>
+	"Curves.h"
+
+1686635390 c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\weapon.h
+	<Entities/Poly.h>
+	<Entities/Weapon/Projectile.h>
+
+1686707543 c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\projectile.h
+	"Managers/FPSManager.h"
+	"Entities/Poly.h"
+	"Particle.h"
+
+1684973358 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\character\playercharacter.cpp
+	"PlayerCharacter.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\entities\character\playercharacter.h
+	<Entities/Character/Character.h>
+
+1686699771 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\poly.cpp
+	"Poly.h"
+
+1686709542 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\collisionmanager.cpp
+	"Managers/CollisionManager.h"
+	"Entities/Character/Character.h"
+	"Poly.h"
+
+1686699547 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\rendermanager.cpp
+	"RenderManager.h"
+
+1686691248 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\projectile.cpp
+	"Entities/Weapon/Projectile.h"
+	"Entities/Character/Character.h"
+	"PlayerManager.h"
+
+1686669183 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\weapon.cpp
+	"Entities/Weapon/Weapon.h"
+	"Entities/Character/Character.h"
+	"Slot.h"
+
+1685148564 c:\users\nektus\desktop\cg\cg_t3\src\entities\entity.h
+	<stdio.h>
+	<vector>
+	"Utils/Pnt2.h"
+	"Utils/Vec2.h"
+	"Poly.h"
+
+1685148568 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\entity.cpp
+	"Entity.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\abstract\renderable.cpp
+	"Renderable.h"
+
+1684416283 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\abstract\renderable.h
+	"Utils/Pnt2.h"
+	"Managers/CameraManager.h"
+
+1684520418 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\character.cpp
+	"Character.h"
+
+1684520304 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\character.h
+	<math.h>
+	<vector>
+	"Utils/Pnt2.h"
+	"Entities/Entity.h"
+	"ShipPart.h"
+	"Slot.h"
+	"Entities/Weapon/Weapon.h"
+	"Entities/Weapon/Projectile.h"
+
+1684520279 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\entity.h
+	<stdio.h>
+	<vector>
+	"Utils/Pnt2.h"
+	"Utils/Vec2.h"
+	"Poly.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\pnt2.h
+
+1684520697 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\vec2.h
+	<math.h>
+	"Entities/Abstract/Renderable.h"
+	"gl_canvas2d.h"
+	"Utils/Pnt2.h"
+
+1684519854 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\poly.h
+	<stdio.h>
+	<vector>
+	"Utils/Vec2.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/CameraManager.h"
+	"Utils/GeometryAux.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"Managers/MouseManager.h"
+	"Entities/Abstract/Renderable.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\mousemanager.h
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\collisionmanager.h
+	<vector>
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1684519485 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\weapon\weapon.h
+	<Entities/Poly.h>
+	<Entities/Weapon/Projectile.h>
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\weapon\projectile.h
+	"Managers/FPSManager.h"
+	"Entities/Poly.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\playercharacter.cpp
+	"PlayerCharacter.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\playercharacter.h
+	<Entities/Character/Character.h>
+
+1684245717 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\entity.cpp
+	"Entity.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\poly.cpp
+	"Poly.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\weapon\projectile.cpp
+	"Entities/Weapon/Projectile.h"
+	"Entities/Character/Character.h"
+
+1684520059 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\weapon\weapon.cpp
+	"Entities/Weapon/Weapon.h"
+	"Entities/Character/Character.h"
+	"Slot.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\collisionmanager.cpp
+	"Managers/CollisionManager.h"
+	"Entities/Character/Character.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\filemanager.cpp
+	"FileManager.h"
+
+1684245030 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\fpsmanager.cpp
+	"FPSManager.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\mousemanager.cpp
+	"MouseManager.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\rendermanager.cpp
+	"RenderManager.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\geometryaux.cpp
+	"GeometryAux.h"
+
+1684245030 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1684520776 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\utils\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1684973358 c:\users\nektus\desktop\cg\cg_t3\src\entities\character\shippart.h
+	<Poly.h>
+	<vector>
+	"Slot.h"
+
+1685148681 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\character\shippart.cpp
+	"ShipPart.h"
+	"Character.h"
+
+1684985451 source:c:\users\nektus\desktop\cg\cg_t3\src\builder\characterbuilder.cpp
+	"CharacterBuilder.h"
+
+1684791957 c:\users\nektus\desktop\cg\cg_t3\src\builder\characterbuilder.h
+	"../Entities/Character/Character.h"
+
+1686702868 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\playermanager.cpp
+	"PlayerManager.h"
+
+1686702830 c:\users\nektus\desktop\cg\cg_t3\src\managers\playermanager.h
+	"Character/Character.h"
+
+1685149346 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\cameramanager.cpp
+	"CameraManager.h"
+
+1686699665 c:\users\nektus\desktop\cg\cg_t3\src\managers\cameramanager.h
+	"Managers/CameraManager.h"
+	"Utils/Pnt2.h"
+
+1684416283 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\cameramanager.h
+	"Managers/CameraManager.h"
+	"Utils/Pnt2.h"
+
+1684518903 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\shippart.h
+	<Poly.h>
+	<vector>
+	"Slot.h"
+
+1684520554 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\builder\characterbuilder.cpp
+	"CharacterBuilder.h"
+
+1684517418 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\builder\characterbuilder.h
+	"../Entities/Character/Character.h"
+
+1684518938 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\shippart.cpp
+	"ShipPart.h"
+	"Character.h"
+
+1684416283 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\playermanager.h
+	"Character/Character.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\cameramanager.cpp
+	"CameraManager.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\managers\playermanager.cpp
+	"PlayerManager.h"
+
+1684416283 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\controller\playercontroller.cpp
+	"PlayerController.h"
+
+1684416283 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\controller\playercontroller.h
+
+1684514986 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\modifiers.cpp
+	"Modifiers.h"
+
+1684515078 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\modifiers.h
+
+1684519937 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\slot.h
+	"Weapon/Weapon.h"
+
+1684518930 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\slot.cpp
+	"Slot.h"
+	"ShipPart.h"
+
+1684515325 source:c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\modifier.cpp
+	"Modifier.h"
+
+1684515567 c:\users\thiago\desktop\grad\cg\trabalhos\t3\src\entities\character\modifier.h
+
+1684550669 source:c:\users\nektus\desktop\cg\cg_t3\src\controller\playercontroller.cpp
+	"PlayerController.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\src\controller\playercontroller.h
+
+1684556705 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\character\modifier.cpp
+	"Modifier.h"
+
+1684556705 c:\users\nektus\desktop\cg\cg_t3\src\entities\character\modifier.h
+
+1684973358 c:\users\nektus\desktop\cg\cg_t3\src\entities\character\slot.h
+	"Weapon/Weapon.h"
+
+1684556705 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\character\slot.cpp
+	"Slot.h"
+	"ShipPart.h"
+
+1686703218 c:\users\nektus\desktop\cg\cg_t3\src\managers\uimanager.h
+	<stdio.h>
+	<vector>
+	"Poly.h"
+	"Entity.h"
+	"Character.h"
+	"PlayerManager.h"
+	"RenderManager.h"
+	"CharacterStatsFrameUI.h"
+
+1686703829 source:c:\users\nektus\desktop\cg\cg_t3\src\managers\uimanager.cpp
+	"UIManager.h"
+
+1684957771 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\builder\characterbuilder.cpp
+	"CharacterBuilder.h"
+
+1684778534 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\builder\characterbuilder.h
+	"../Entities/Character/Character.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\character.h
+	<math.h>
+	<vector>
+	<map>
+	"Utils/Pnt2.h"
+	"Entities/Entity.h"
+	"ShipPart.h"
+	"Slot.h"
+	"Entities/Weapon/Weapon.h"
+	"Entities/Weapon/Projectile.h"
+	"Particle.h"
+
+1686676591 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\pnt2.h
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\entity.h
+	<stdio.h>
+	<vector>
+	"Utils/Pnt2.h"
+	"Utils/Vec2.h"
+	"Poly.h"
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\vec2.h
+	<math.h>
+	"Entities/Abstract/Renderable.h"
+	"gl_canvas2d.h"
+	"Utils/Pnt2.h"
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\abstract\renderable.h
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Utils/Pnt2.h"
+	"Managers/CameraManager.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\cameramanager.h
+	"Managers/CameraManager.h"
+	"Utils/Pnt2.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\include\gl\glut.h
+	"freeglut_std.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\poly.h
+	<stdio.h>
+	<vector>
+	"Utils/Vec2.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/CameraManager.h"
+	"Utils/GeometryAux.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"Managers/MouseManager.h"
+	"Entities/Abstract/Renderable.h"
+	"Utils/GeometryAux.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\mousemanager.h
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\collisionmanager.h
+	<vector>
+	<map>
+	"Curves.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1684942516 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\shippart.h
+	<Poly.h>
+	<vector>
+	"Slot.h"
+
+1684943665 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\slot.h
+	"Weapon/Weapon.h"
+
+1686673549 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\weapon.h
+	<Entities/Poly.h>
+	<Entities/Weapon/Projectile.h>
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\projectile.h
+	"Managers/FPSManager.h"
+	"Entities/Poly.h"
+	"Particle.h"
+
+1685117417 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\controller\playercontroller.cpp
+	"PlayerController.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\controller\playercontroller.h
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\abstract\renderable.cpp
+	"Renderable.h"
+	"Utils/Vec2.h"
+
+1686746374 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\character.cpp
+	"Character.h"
+	"PlayerManager.h"
+	"UIManager.h"
+	"Entities/Weapon/HoomingProjectile.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\modifier.cpp
+	"Modifier.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\modifier.h
+
+1684947309 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\playercharacter.cpp
+	"PlayerCharacter.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\playercharacter.h
+	<Entities/Character/Character.h>
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\shippart.cpp
+	"ShipPart.h"
+	"Character.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\character\slot.cpp
+	"Slot.h"
+	"ShipPart.h"
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\entity.cpp
+	"Entity.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\poly.cpp
+	"Poly.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\projectile.cpp
+	"Entities/Weapon/Projectile.h"
+	"Entities/Character/Character.h"
+	"PlayerManager.h"
+
+1686673549 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\weapon.cpp
+	"Entities/Weapon/Weapon.h"
+	"Entities/Character/Character.h"
+	"Slot.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1686745814 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	<cstdlib>
+	<iostream>
+	"gl_canvas2d.h"
+	"Managers/FileManager.h"
+	"Managers/MouseManager.h"
+	"Managers/RenderManager.h"
+	"Managers/CollisionManager.h"
+	"Managers/FPSManager.h"
+	"Managers/PlayerManager.h"
+	"Managers/UIManager.h"
+	"Builder/CharacterBuilder.h"
+	"Utils/Vec2.h"
+	"Entities/Poly.h"
+	"Entities/Entity.h"
+	"Entities/Character/Character.h"
+	"Entities/Character/PlayerCharacter.h"
+	"Utils/Curves.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\playermanager.h
+	"Character/Character.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\uimanager.h
+	<stdio.h>
+	<vector>
+	"Poly.h"
+	"Entity.h"
+	"Character.h"
+	"PlayerManager.h"
+	"RenderManager.h"
+	"CharacterStatsFrameUI.h"
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\cameramanager.cpp
+	"CameraManager.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\collisionmanager.cpp
+	"Managers/CollisionManager.h"
+	"Entities/Character/Character.h"
+	"Poly.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\filemanager.cpp
+	"FileManager.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\fpsmanager.cpp
+	"FPSManager.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\mousemanager.cpp
+	"MouseManager.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\playermanager.cpp
+	"PlayerManager.h"
+
+1686684145 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\rendermanager.cpp
+	"RenderManager.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\geometryaux.cpp
+	"GeometryAux.h"
+
+1686676614 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1686747220 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\managers\uimanager.cpp
+	"UIManager.h"
+
+1684770550 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\uientity.cpp
+	"UIEntity.h"
+
+1684770543 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\ui\uientity.h
+	<Entity.h>
+
+1684963230 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\ui\characterstatsframeui.h
+	"Entity.h"
+	"Character.h"
+
+1684963150 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\ui\characterstatsframeui.cpp
+	"CharacterStatsFrameUI.h"
+
+1684958850 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\characterhud.cpp
+	"CharacterHUD.h"
+
+1684958850 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\ui\characterhud.h
+
+1684973358 source:c:\users\nektus\desktop\cg\cg_t3\src\characterhud.cpp
+	"CharacterHUD.h"
+
+1684973358 c:\users\nektus\desktop\cg\cg_t3\src\ui\characterhud.h
+
+1684973358 c:\users\nektus\desktop\cg\cg_t3\src\ui\characterstatsframeui.h
+	"Entity.h"
+	"Character.h"
+
+1684973358 source:c:\users\nektus\desktop\cg\cg_t3\src\ui\characterstatsframeui.cpp
+	"CharacterStatsFrameUI.h"
+
+1684791957 source:c:\users\nektus\desktop\cg\cg_t3\src\uientity.cpp
+	"UIEntity.h"
+
+1684791957 c:\users\nektus\desktop\cg\cg_t3\src\ui\uientity.h
+	<Entity.h>
+
+1685067304 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\pointset.cpp
+	"PointSet.h"
+
+1685067054 c:\users\nektus\desktop\cg\cg_t3\src\entities\pointset.h
+	<vector>
+	"Utils/Pnt2.h"
+	"Utils/Vec2.h"
+	"Abstract/Renderable.h"
+
+1686689107 source:c:\users\nektus\desktop\cg\cg_t3\src\utils\curves.cpp
+	"Curves.h"
+
+1686693696 c:\users\nektus\desktop\cg\cg_t3\src\utils\curves.h
+	"gl_canvas2d.h"
+	<vector>
+	"Entities/Abstract/Renderable.h"
+	"Pnt2.h"
+	"GeometryAux.h"
+	"RenderManager.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\curves.h
+	"gl_canvas2d.h"
+	<vector>
+	"Entities/Abstract/Renderable.h"
+	"Pnt2.h"
+	"GeometryAux.h"
+	"RenderManager.h"
+
+1686679623 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\utils\curves.cpp
+	"Curves.h"
+
+1686705966 c:\users\nektus\desktop\cg\cg_t3\src\entities\particle.h
+	"Abstract/Renderable.h"
+	"RenderManager.h"
+	"FPSManager.h"
+	"map"
+	"tuple"
+
+1686634745 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\particle.cpp
+	"Particle.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\particle.h
+	"Abstract/Renderable.h"
+	"RenderManager.h"
+	"FPSManager.h"
+	"map"
+	"tuple"
+
+1686673549 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\particle.cpp
+	"Particle.h"
+
+1684550669 c:\users\nektus\desktop\cg\cg_t3\include\geometryaux.h
+
+1686709703 source:c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\hoomingprojectile.cpp
+	"HoomingProjectile.h"
+	"Character.h"
+
+1686707370 c:\users\nektus\desktop\cg\cg_t3\src\entities\weapon\hoomingprojectile.h
+	"Projectile.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\hoomingprojectile.h
+	"Projectile.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t3\src\entities\weapon\hoomingprojectile.cpp
+	"HoomingProjectile.h"
+	"Character.h"
+
