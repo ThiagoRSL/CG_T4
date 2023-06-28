@@ -7,7 +7,6 @@
 #include "Poly.h"
 #include "Entity.h"
 #include "Character.h"
-#include "PlayerManager.h"
 #include "RenderManager.h"
 #include "CharacterStatsFrameUI.h"
 

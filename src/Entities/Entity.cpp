@@ -126,4 +126,22 @@ void Entity::Render()
     {
         Parts.at(i)->Render();
     }
+
+    float virtualX, virtualY;
+    if(RenderManager::shared_instance().GetShowAnchors())
+    {
+        if(!this->isStatic)
+        {
+            virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
+            virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+        }
+        else
+        {
+            virtualX = StaticOffset.x + Offset.x;
+            virtualY = StaticOffset.y + Offset.y;
+        }
+        CV::color(6);
+        CV::circle(virtualX, virtualY, 10, 30);
+    }
+
 }

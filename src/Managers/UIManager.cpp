@@ -20,27 +20,10 @@ void UIManager::OpenInventory()
 {
     if(!show_inventory)
     {
-        // Main Background
-        InventoryBackground->SetStatic(true);
-        InventoryBackground->SetStaticOffset(50,50);
-        UIManager::shared_instance().AddRenderableToList(InventoryBackground);
-
-        // CharacterProjection
-        CharacterProjection = PlayerManager::shared_instance().GetPlayerCharacter()->GetCopy();
-        CharacterProjection->Resize(2);
-        CharacterProjection->SetStatic(true);
-        CharacterProjection->SetStaticOffset(300,300);
-        UIManager::shared_instance().AddRenderableToList(CharacterProjection);
-
-
-        printf("\nOpening inventory...");
         show_inventory = true;
     }
     else
     {
-        UIManager::shared_instance().RemoveRenderableFromList(CharacterProjection);
-        UIManager::shared_instance().RemoveRenderableFromList(InventoryBackground);
-        delete CharacterProjection;
         printf("\nClosing inventory...");
         show_inventory = false;
     }
@@ -135,6 +118,7 @@ void UIManager::RenderStageLabel()
     CV::color(1,1,1);
     CV::text(position - 30, 50, stage_text.c_str());
 }
+
 void UIManager::RenderResetNotification()
 {
     float posX = glutGet(GLUT_SCREEN_WIDTH)/2;
@@ -144,19 +128,7 @@ void UIManager::RenderResetNotification()
     CV::text(posX - 160, posY, "Game is Over, press R to Restart.");
 }
 
-
-
 void UIManager::RenderAll()
 {
     RenderManager::RenderAll();
-    RenderScore();
-    RenderStageLabel();
-    if(PlayerManager::shared_instance().IsGameOver())
-        RenderResetNotification();
-
-    int i;
-    for(i = 0; i < CharacterStatsFrames.size();i++)
-    {
-        CharacterStatsFrames.at(i)->Render();
-    }
 }

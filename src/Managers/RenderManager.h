@@ -13,6 +13,10 @@ typedef void (*callback_function)(void);
 
 class RenderManager
 {
+    private:
+        bool showAnchors;
+        std::vector<Renderable*> renderList;
+
     public:
         static const int RENDER_DISTANCE = 2500;
         static RenderManager &shared_instance() {static RenderManager renderManager; return renderManager;}
@@ -20,14 +24,13 @@ class RenderManager
         void AddRenderableToList(Renderable* element);
         void RemoveRenderableFromList(Renderable* element);
         void SetFirstPosition(Renderable* element);
+        void ToggleShowAnchors() {this->showAnchors = !this->showAnchors;}
+        bool GetShowAnchors() {return this->showAnchors;}
         virtual void ClearManager();
-        //AddToRenderQueue(Renderizable element, int priority_level);
         virtual void RenderAll();
+        //AddToRenderQueue(Renderizable element, int priority_level);
 
     protected:
-
-    private:
-        std::vector<Renderable*> renderList;
 
 
 };

@@ -5,7 +5,6 @@
 #include <vector>
 #include "Utils/Vec2.h"
 #include "Managers/RenderManager.h"
-#include "Managers/CollisionManager.h"
 #include "Managers/CameraManager.h"
 #include "Utils/GeometryAux.h"
 

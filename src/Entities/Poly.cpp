@@ -165,6 +165,11 @@ void Poly::RenderBody()
         float vy[3] = {virtualY, virtualY + Vertexes.at(i)->y, virtualY + Vertexes.at(a)->y};
         CV::polygonFill(vx, vy, 3);
     }
+    if(RenderManager::shared_instance().GetShowAnchors())
+    {
+        CV::color(6);
+        CV::circle(virtualX, virtualY, 10, 30);
+    }
 }
 
 void Poly::RenderBorder()

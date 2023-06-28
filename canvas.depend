@@ -1342,3 +1342,243 @@
 	"HoomingProjectile.h"
 	"Character.h"
 
+1684957771 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\builder\characterbuilder.cpp
+	"CharacterBuilder.h"
+
+1684778534 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\builder\characterbuilder.h
+	"../Entities/Character/Character.h"
+
+1684958850 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\characterhud.cpp
+	"CharacterHUD.h"
+
+1684958850 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\ui\characterhud.h
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\controller\playercontroller.cpp
+	"PlayerController.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\controller\playercontroller.h
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.cpp
+	"Renderable.h"
+	"Utils/Vec2.h"
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.h
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Utils/Pnt2.h"
+	"Managers/CameraManager.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\include\gl\glut.h
+	"freeglut_std.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1686676591 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\pnt2.h
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\cameramanager.h
+	"Managers/CameraManager.h"
+	"Utils/Pnt2.h"
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\vec2.h
+	<math.h>
+	"Entities/Abstract/Renderable.h"
+	"gl_canvas2d.h"
+	"Utils/Pnt2.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1687963538 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.cpp
+	"Entity.h"
+
+1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.h
+	<stdio.h>
+	<vector>
+	"Utils/Pnt2.h"
+	"Utils/Vec2.h"
+	"Poly.h"
+
+1687957126 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\poly.h
+	<stdio.h>
+	<vector>
+	"Utils/Vec2.h"
+	"Managers/RenderManager.h"
+	"Managers/CameraManager.h"
+	"Utils/GeometryAux.h"
+
+1687963127 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\rendermanager.h
+	<stdlib.h>
+	<algorithm>
+	<iostream>
+	<vector>
+	"Managers/MouseManager.h"
+	"Entities/Abstract/Renderable.h"
+	"Utils/GeometryAux.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\mousemanager.h
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\collisionmanager.h
+	<vector>
+	<map>
+	"Curves.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\curves.h
+	"gl_canvas2d.h"
+	<vector>
+	"Entities/Abstract/Renderable.h"
+	"Pnt2.h"
+	"GeometryAux.h"
+	"RenderManager.h"
+
+1686673549 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\particle.cpp
+	"Particle.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\particle.h
+	"Abstract/Renderable.h"
+	"RenderManager.h"
+	"FPSManager.h"
+	"map"
+	"tuple"
+
+1685117417 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\fpsmanager.h
+	<stdio.h>
+	<time.h>
+
+1687963215 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\poly.cpp
+	"Poly.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\cameramanager.cpp
+	"CameraManager.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\collisionmanager.cpp
+	"Managers/CollisionManager.h"
+	"Entities/Character/Character.h"
+	"Poly.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\filemanager.cpp
+	"FileManager.h"
+
+1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\filemanager.h
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<vector>
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\fpsmanager.cpp
+	"FPSManager.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\mousemanager.cpp
+	"MouseManager.h"
+
+1686745464 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\playermanager.cpp
+	"PlayerManager.h"
+
+1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\playermanager.h
+	"Character/Character.h"
+
+1687963122 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\rendermanager.cpp
+	"RenderManager.h"
+
+1687957341 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\uimanager.cpp
+	"UIManager.h"
+
+1687957137 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\managers\uimanager.h
+	<stdio.h>
+	<vector>
+	"Poly.h"
+	"Entity.h"
+	"Character.h"
+	"RenderManager.h"
+	"CharacterStatsFrameUI.h"
+
+1687957249 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\character.h
+	<math.h>
+	<vector>
+	<map>
+	"Utils/Pnt2.h"
+	"Entities/Entity.h"
+	"Particle.h"
+
+1684963230 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\ui\characterstatsframeui.h
+	"Entity.h"
+	"Character.h"
+
+1684963150 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\ui\characterstatsframeui.cpp
+	"CharacterStatsFrameUI.h"
+
+1684770550 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\uientity.cpp
+	"UIEntity.h"
+
+1684770543 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\ui\uientity.h
+	<Entity.h>
+
+1686679623 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\curves.cpp
+	"Curves.h"
+
+1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\geometryaux.cpp
+	"GeometryAux.h"
+
+1686676614 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1687964466 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	<cstdlib>
+	<iostream>
+	"gl_canvas2d.h"
+	"Managers/FileManager.h"
+	"Managers/MouseManager.h"
+	"Managers/RenderManager.h"
+	"Managers/FPSManager.h"
+	"Managers/UIManager.h"
+	"Utils/Vec2.h"
+	"Entities/Poly.h"
+	"Entities/Entity.h"
+	"Entities/Character.h"
+	"Utils/Curves.h"
+
+1687957269 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\character.cpp
+
+1687959228 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\motor.cpp
+	"Motor.h"
+
+1687960759 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\motor.h
+

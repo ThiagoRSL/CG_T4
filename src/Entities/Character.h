@@ -6,10 +6,6 @@
 #include <map>
 #include "Utils/Pnt2.h"
 #include "Entities/Entity.h"
-#include "ShipPart.h"
-#include "Slot.h"
-#include "Entities/Weapon/Weapon.h"
-#include "Entities/Weapon/Projectile.h"
 #include "Particle.h"
 
 class PlayerManager;
@@ -45,15 +41,12 @@ class Character : public Entity
         void RenderShipParts();
         void RenderTrail();
 
-        void AppendPart(ShipPart* part);
-        void RemovePart(ShipPart* part);
         void UpdateParts();
         void UpdatePartsModifiers();
         void RemovePartsModifiers();
 
         void CreatePartSlot(int type_part_id, Pnt2 offset);
         void Rotate(float degrees);
-        bool EquipWeapon(Weapon* weapon);
 
         void UpdateWeaponAim();
 
@@ -61,8 +54,6 @@ class Character : public Entity
         void TeleportTo(float x, float y) {Anchor->x = x; Anchor->y = y;}
 
     protected:
-        std::map<int, std::pair<Pnt2*, ShipPart*>> ShipParts;
-        std::vector<WeaponSlot*> WeaponSlots;
         Particle* Trail;
         //SpecialPower* Special;
         Pnt2* AimPoint;

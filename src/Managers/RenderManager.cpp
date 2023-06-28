@@ -2,7 +2,7 @@
 
 RenderManager::RenderManager()
 {
-
+    this->showAnchors = false;
 }
 
 void RenderManager::RenderAll()
