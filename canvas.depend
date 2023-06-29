@@ -1405,10 +1405,10 @@
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 
-1687963538 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.cpp
+1688049663 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.cpp
 	"Entity.h"
 
-1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.h
+1688047669 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\entity.h
 	<stdio.h>
 	<vector>
 	"Utils/Pnt2.h"
@@ -1443,7 +1443,7 @@
 	<map>
 	"Curves.h"
 
-1686745464 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\curves.h
+1688050304 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\curves.h
 	"gl_canvas2d.h"
 	<vector>
 	"Entities/Abstract/Renderable.h"
@@ -1465,7 +1465,7 @@
 	<stdio.h>
 	<time.h>
 
-1687963215 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\poly.cpp
+1687964653 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\poly.cpp
 	"Poly.h"
 
 1684764394 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\gl_canvas2d.cpp
@@ -1548,11 +1548,11 @@
 	"Pnt2.h"
 	"Vec2.h"
 
-1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\vec2.cpp
+1688049170 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\utils\vec2.cpp
 	"Vec2.h"
 	"GeometryAux.h"
 
-1687964466 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
+1688046756 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1574,13 +1574,16 @@
 	"Entities/Entity.h"
 	"Entities/Character.h"
 	"Utils/Curves.h"
+	"Crankshaft.h"
+	"Piston.h"
 
 1687957269 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\character.cpp
 
 1687959228 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\motor.cpp
 	"Motor.h"
 
-1687960759 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\motor.h
+1688046756 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\motor.h
+	"Utils/Pnt2.h"
 
 1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\characterhud.cpp
 	"CharacterHUD.h"
@@ -1819,4 +1822,22 @@
 1688000077 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
 	<Entity.h>
 	"Crankshaft.h"
+
+1688048515 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\piston.cpp
+	"Piston.h"
+
+1688047797 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\piston.h
+	<Entity.h>
+	"Crankshaft.h"
+
+1688050231 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.h
+	"Entity.h"
+	"Pnt2.h"
+	"Poly.h"
+	"Curves.h"
+	<vector>
+
+1688049619 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.cpp
+	"Crankshaft.h"
+	"Piston.h"
 

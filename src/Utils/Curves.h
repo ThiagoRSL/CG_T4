@@ -12,6 +12,17 @@
 class Curve2d : public Renderable
 {
 
+    protected:
+        bool show_control_graph;
+        bool show_with_lines;
+        float curve_resolution;
+        float Color[3];
+        std::vector<Pnt2*> ControlPoints;
+        std::vector<Pnt2*> CurvePoints;
+        int firstToRenderIndex, lastToRenderIndex;
+        void RenderWithLines();
+        void RenderWithPoints();
+
     public:
         Curve2d();
         ~Curve2d();
@@ -24,22 +35,12 @@ class Curve2d : public Renderable
         virtual void GenerateCurvePoints() = 0;
         Pnt2* NearPoint(Pnt2 point, float distanceMin);
         Pnt2* GetFirstCurvePoint() { return CurvePoints.at(0);}
+        std::vector<Pnt2*> GetCurvePoints() { return CurvePoints;}
         Pnt2* GetLastCurvePoint() { return CurvePoints.at(CurvePoints.size()-1);}
         Pnt2* GetCurvePoint(int i);
         void UpdateClosestPoint();
 
         void Render();
-
-    protected:
-        bool show_control_graph;
-        bool show_with_lines;
-        float curve_resolution;
-        float Color[3];
-        std::vector<Pnt2*> ControlPoints;
-        std::vector<Pnt2*> CurvePoints;
-        int firstToRenderIndex, lastToRenderIndex;
-        void RenderWithLines();
-        void RenderWithPoints();
 };
 
 class BSpline : public Curve2d

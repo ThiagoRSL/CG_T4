@@ -5,6 +5,7 @@
 #include "Entity.h"
 #include "Pnt2.h"
 #include "Poly.h"
+#include "Curves.h"
 #include <vector>
 
 class Piston;
@@ -13,7 +14,7 @@ class Crankshaft : public Entity
 {
     private:
         float radius;
-        Pnt2* SlotPoint;
+        Vec2* SlotPoint;
         std::vector<Piston*> Pistons;
 
     public:
@@ -21,7 +22,7 @@ class Crankshaft : public Entity
         //virtual ~Crankshaft();
 
         void CreateBody(float r, float* RGB);
-        Pnt2* GetSlotPoint() {return SlotPoint;}
+        Vec2* GetSlotPoint() {return SlotPoint;}
         void AppendPiston(Piston* pis);
         void Render();
 };

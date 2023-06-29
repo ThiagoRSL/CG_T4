@@ -9,10 +9,19 @@
 
 class Entity : public Renderable
 {
+
+    protected:
+        Vec2* OrientationVector;
+        std::vector<Poly*> Parts;
+        std::vector<Vec2*> Points;
+
+        float background_color[3];
+
     public:
         Entity(float x, float y);
         Entity(float x, float y, float* RGB);
         void AppendPoly(Poly* poly);
+        void AppendPoint(Vec2* point);
         virtual void Render();
 
         void Move(float speed);
@@ -20,12 +29,6 @@ class Entity : public Renderable
         virtual void Rotate(float degrees);
         Poly* CollideAt(float x, float y);
         void SetFirstPosition(Poly* part);
-
-    protected:
-        Vec2* OrientationVector;
-        std::vector<Poly*> Parts;
-
-        float background_color[3];
 
     public:
         Entity* GetCopy();

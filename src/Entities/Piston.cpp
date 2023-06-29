@@ -6,6 +6,7 @@ Piston::Piston(Crankshaft* cs, float connectingRodSize, float* RGB)
 {
     this->CrankShaft = cs;
     cs->AppendPiston(this);
+    this->SetAnchor(cs->GetAnchor());
     this->FixedAt = cs->GetSlotPoint();
     this->connectingRodSize = connectingRodSize;
 }

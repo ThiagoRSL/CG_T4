@@ -9,7 +9,7 @@ class Piston : public Entity
 {
     private:
         Crankshaft* CrankShaft;
-        Pnt2* FixedAt;
+        Vec2* FixedAt;
         float pistonHeight;
         float connectingRodSize;
         void CalculateHeight();

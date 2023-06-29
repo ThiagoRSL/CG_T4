@@ -38,6 +38,10 @@ void Entity::Rotate(float degrees)
     {
         Parts.at(i)->Rotate(degrees);
     }
+    for (i = 0; i < Points.size(); i++)
+    {
+        Points.at(i)->RotateDegrees(degrees);
+    }
     OrientationVector->RotateDegrees(degrees);
 }
 
@@ -46,6 +50,12 @@ void Entity::AppendPoly(Poly* poly)
     Parts.push_back(poly);
     poly->SetAnchor(this->Anchor);
     poly->SetBackgroundColor(this->background_color);
+}
+
+void Entity::AppendPoint(Vec2* point)
+{
+    point->SetAnchor(this->Anchor);
+    this->Points.push_back(point);
 }
 
 std::vector<Poly*>* Entity::GetPartsCopy()
