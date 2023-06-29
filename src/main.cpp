@@ -36,16 +36,18 @@
 #include "Entities/Entity.h"
 #include "Entities/Character.h"
 #include "Utils/Curves.h"
+#include "Crankshaft.h"
+#include "Piston.h"
 
 const int CONTROL_POINTS = 50;
 const int CONTROL_POINTS_INCREMENT = 0;
 
 std::set<int> PressedKeys;
-Entity* vb;
+Crankshaft* cs;
 
 void render()
 {
-    //CV::clear(0,0,0);
+    CV::clear(0,0,0);
 
     //glBegin(GL_LINES);
     FPSManager::shared_instance().UpdateFrames();
@@ -103,14 +105,14 @@ void keyboardUp(int key)
       break;
       case 97:
         //Seta pra esquerda
-        vb->Rotate(-15);
+        cs->Rotate(-15);
       break;
       case 100:
         //Seta pra direita
-        vb->Rotate(15);
+        cs->Rotate(15);
       break;
       case 114:
-        //R
+        //Rthis->FixedAt->x
       break;
       case 115:
         //Seta pra baixo
@@ -154,24 +156,12 @@ int main(void)
     Poly* p1 = new Poly(0, 0, RGB);
     p1->SetOffset(40, 0);
 
-    float radius = 50.0;
-    float angInit = -(PI/2);
-    float angMax = (PI/2);
-    float angStep = PI/180;
-    float ang;
+    cs = new Crankshaft(0, 0, 50, RGB);
+    cs->SetOffset(40, 0);
 
-    //Cria Virabrequim
-    p1->AddVertex(-90, -20);
-    p1->AddVertex(-40, -30);
-    for(ang = angInit; ang <= angMax+angStep; ang = ang + angStep)
-    {
-        p1->AddVertex(-(2*radius/5) + radius * cos(ang), radius * sin(ang));
-    }
-    p1->AddVertex(-40, 30);
-    p1->AddVertex(-90, 20);
-    //Termina Vibraquim
+    Piston* piston = new Piston(cs, 50, RGB);
 
-    //Cria Biela
+    /*Cria Biela
     Poly* p2 = new Poly(0, 0, RGB);
     p2->SetOffset(-40, 0);
     Vec2* bielaPonta = new Vec2(40, 200);
@@ -180,15 +170,12 @@ int main(void)
     p2->AddVertex(10, 0);
     p2->AddVertex(10, 200);
     p2->AddVertex(-10, 200);
-    //Termina Biela
+    Termina Biela*/
 
 
 
-    vb = new Entity(800, 600, RGB);
-    vb->AppendPoly(p1);
-    vb->AppendPoly(p2);
 
-    RenderManager::shared_instance().AddRenderableToList(vb);
+    RenderManager::shared_instance().AddRenderableToList(cs);
 
 
     CV::init("Motor de Moto (Harley Davidson)");
@@ -196,7 +183,7 @@ int main(void)
     int screenWidth = glutGet(GLUT_SCREEN_WIDTH);
     int screenHeight = glutGet(GLUT_SCREEN_HEIGHT);
 
-    Pnt2* globanchor = vb->GetAnchor();
+    Pnt2* globanchor = cs->GetAnchor();
     CameraManager::shared_instance().SetCameraAnchor(globanchor);
     CameraManager::shared_instance().SetCameraOffset(Pnt2((float) -screenWidth/2, (float) -screenHeight/2));
 

@@ -63,12 +63,16 @@
 		<Unit filename="src/Entities/Abstract/Renderable.h" />
 		<Unit filename="src/Entities/Character.cpp" />
 		<Unit filename="src/Entities/Character.h" />
+		<Unit filename="src/Entities/Crankshaft.cpp" />
+		<Unit filename="src/Entities/Crankshaft.h" />
 		<Unit filename="src/Entities/Entity.cpp" />
 		<Unit filename="src/Entities/Entity.h" />
 		<Unit filename="src/Entities/Motor.cpp" />
 		<Unit filename="src/Entities/Motor.h" />
 		<Unit filename="src/Entities/Particle.cpp" />
 		<Unit filename="src/Entities/Particle.h" />
+		<Unit filename="src/Entities/Piston.cpp" />
+		<Unit filename="src/Entities/Piston.h" />
 		<Unit filename="src/Entities/Poly.cpp" />
 		<Unit filename="src/Entities/Poly.h" />
 		<Unit filename="src/Managers/CameraManager.cpp" />

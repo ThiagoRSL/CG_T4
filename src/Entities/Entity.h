@@ -13,7 +13,7 @@ class Entity : public Renderable
         Entity(float x, float y);
         Entity(float x, float y, float* RGB);
         void AppendPoly(Poly* poly);
-        void Render();
+        virtual void Render();
 
         void Move(float speed);
         void Resize(float scalar);

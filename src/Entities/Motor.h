@@ -1,5 +1,8 @@
 #ifndef MOTOR_H
 #define MOTOR_H
+
+#include "Utils/Pnt2.h"
+
 class Motor
 {
     public:
@@ -10,38 +13,34 @@ class Motor
 
     private:
 };
-
 /*
-class Virabrequim
+class Virabrequim : public Entity
 {
+    private:
+        float radius;
+        Pnt2 SlotPoint;
+
     public:
-        Virabrequim();
+        Virabrequim(float x, float y, float r, float* RGB);
         virtual ~Virabrequim();
 
-    protected:
+        void CreateBody();
+        void GetSlotPoint() {return &SlotPoint;}
+        void Render();
 
-    private:
 };
 
-class Biela
+class Pistao : public Entity
 {
-    public:
-        Biela();
-        virtual ~Biela();
-
-    protected:
-
     private:
-};
+        Pnt2* FixedAt;
+        float distance;
 
-class Pistao
-{
     public:
-        Biela();
-        virtual ~Biela();
+        Pistao(Virabrequim* vb, float distance, float* RGB);
+        float CalculateHeight();
 
-    protected:
+        void Render();
 
-    private:
 };*/
 #endif // MOTOR_H
