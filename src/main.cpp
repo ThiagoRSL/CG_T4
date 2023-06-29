@@ -47,7 +47,7 @@ Crankshaft* cs;
 
 void render()
 {
-    CV::clear(0,0,0);
+    CV::clear(1,1,1);
 
     //glBegin(GL_LINES);
     FPSManager::shared_instance().UpdateFrames();
@@ -155,21 +155,7 @@ int main(void)
     cs = new Crankshaft(0, 0, 50, RGB);
     cs->SetOffset(40, 0);
 
-    Piston* piston = new Piston(cs, 50, RGB);
-
-    /*Cria Biela
-    Poly* p2 = new Poly(0, 0, RGB);
-    p2->SetOffset(-40, 0);
-    Vec2* bielaPonta = new Vec2(40, 200);
-    p2->AddVertex(bielaPonta);
-    p2->AddVertex(-10, 0);
-    p2->AddVertex(10, 0);
-    p2->AddVertex(10, 200);
-    p2->AddVertex(-10, 200);
-    Termina Biela*/
-
-
-
+    Piston* piston = new Piston(cs, 200, RGB);
 
     RenderManager::shared_instance().AddRenderableToList(cs);
 

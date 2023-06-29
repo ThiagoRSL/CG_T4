@@ -1595,11 +1595,11 @@
 
 1687983522 c:\users\nektus\desktop\cg\cg_t4\src\controller\playercontroller.h
 
-1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\abstract\renderable.cpp
+1688074533 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\abstract\renderable.cpp
 	"Renderable.h"
 	"Utils/Vec2.h"
 
-1687983522 c:\users\nektus\desktop\cg\cg_t4\src\entities\abstract\renderable.h
+1688074533 c:\users\nektus\desktop\cg\cg_t4\src\entities\abstract\renderable.h
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	"Utils/Pnt2.h"
@@ -1644,10 +1644,10 @@
 
 1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\character.cpp
 
-1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\entity.cpp
+1688074533 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\entity.cpp
 	"Entity.h"
 
-1687988146 c:\users\nektus\desktop\cg\cg_t4\src\entities\entity.h
+1688074533 c:\users\nektus\desktop\cg\cg_t4\src\entities\entity.h
 	<stdio.h>
 	<vector>
 	"Utils/Pnt2.h"
@@ -1691,14 +1691,14 @@
 	<stdio.h>
 	<time.h>
 
-1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\poly.cpp
+1688076445 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\poly.cpp
 	"Poly.h"
 
 1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1687998162 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
+1688075585 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1751,7 +1751,7 @@
 	"Entity.h"
 	"Character.h"
 
-1687983522 c:\users\nektus\desktop\cg\cg_t4\src\utils\curves.h
+1688074533 c:\users\nektus\desktop\cg\cg_t4\src\utils\curves.h
 	"gl_canvas2d.h"
 	<vector>
 	"Entities/Abstract/Renderable.h"
@@ -1806,20 +1806,22 @@
 1687986710 c:\users\nektus\desktop\cg\cg_t4\src\entities\motor.h
 	"Utils/Pnt2.h"
 
-1688000056 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
+1688074533 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
 	"Crankshaft.h"
 	"Piston.h"
 
-1688000065 c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.h
+1688074533 c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.h
+	"FPSManager.h"
 	"Entity.h"
 	"Pnt2.h"
 	"Poly.h"
+	"Curves.h"
 	<vector>
 
-1687999405 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.cpp
+1688075932 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.cpp
 	"Piston.h"
 
-1688000077 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
+1688074533 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
 	<Entity.h>
 	"Crankshaft.h"
 

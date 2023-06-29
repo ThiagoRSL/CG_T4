@@ -143,28 +143,23 @@ void Poly::RenderBody()
     CV::color(background_color[0], background_color[1], background_color[2]);
     int i, a;
     float virtualX, virtualY;
+    if(!this->isStatic)
+    {
+        virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
+        virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+    }
+    else
+    {
+        virtualX = StaticOffset.x + Offset.x;
+        virtualY = StaticOffset.y + Offset.y;
+    }
+    glBegin(GL_TRIANGLE_FAN);
     for(i = 0; i < Vertexes.size(); i++)
     {
-        if(i != Vertexes.size()-1)
-            a = i+1;
-        else
-            a = 0;
+        glVertex2d(virtualX + Vertexes.at(i)->x, virtualY + Vertexes.at(i)->y);
 
-        if(!this->isStatic)
-        {
-            virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
-            virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
-        }
-        else
-        {
-            virtualX = StaticOffset.x + Offset.x;
-            virtualY = StaticOffset.y + Offset.y;
-        }
-
-        float vx[3] = {virtualX, virtualX + Vertexes.at(i)->x, virtualX + Vertexes.at(a)->x};
-        float vy[3] = {virtualY, virtualY + Vertexes.at(i)->y, virtualY + Vertexes.at(a)->y};
-        CV::polygonFill(vx, vy, 3);
     }
+    glEnd();
     if(RenderManager::shared_instance().GetShowAnchors())
     {
         CV::color(6);

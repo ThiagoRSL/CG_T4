@@ -22,7 +22,7 @@ Piston::Piston(Crankshaft* cs, float connectingRodSize, float* RGB)
 void Piston::CalculateHeight()
 {
     float s1 = this->FixedAt->x - this->CrankShaft->GetAnchor()->x;
-    float s2 = -200;//sqrtf((this->connectingRodSize*this->connectingRodSize) - (s1*s1));
+    float s2 = sqrtf((this->connectingRodSize*this->connectingRodSize) - (s1*s1));
 
     this->pistonHeight = this->FixedAt->y + s2;
 }
@@ -45,16 +45,13 @@ void Piston::Render()
         CV::color(6);
         CV::circle(virtualX, virtualY, 10, 30);
     }
-    //CV::line(fixedPos.x - 10, this->FixedAt->y + virtualY, this->CrankShaft->GetAnchor()->x + virtualX, this->CrankShaft->GetAnchor()->y + virtualY + this->pistonHeight);
-
-
-    Pnt2 fixedPos = Pnt2(this->FixedAt->x + virtualX, this->FixedAt->y + virtualY);
     this->CalculateHeight();
 
-    Poly p = Poly(this->Anchor->x, this->Anchor->y, this->background_color);
-    p.AddVertex(fixedPos.x-10, 0);
-    p.AddVertex(fixedPos.x+10, 0);
-    p.AddVertex(this->CrankShaft->GetAnchor()->x + virtualX + 10, this->CrankShaft->GetAnchor()->y + virtualY + this->pistonHeight);
-    p.AddVertex(this->CrankShaft->GetAnchor()->x + virtualX - 10, this->CrankShaft->GetAnchor()->y + virtualY + this->pistonHeight);
+    Poly p = Poly(0, 0, this->background_color);
+    p.SetAnchor(this->Anchor);
+    p.AddVertex(this->CrankShaft->GetAnchor()->x + 10, this->CrankShaft->GetAnchor()->y - this->pistonHeight);
+    p.AddVertex(this->CrankShaft->GetAnchor()->x - 10, this->CrankShaft->GetAnchor()->y - this->pistonHeight);
+    p.AddVertex(this->FixedAt->x - 10, this->FixedAt->y);
+    p.AddVertex(this->FixedAt->x + 10, this->FixedAt->y);
     p.Render();
 }
