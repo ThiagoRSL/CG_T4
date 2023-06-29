@@ -78,13 +78,11 @@ void keyboard(int key)
         //Seta pra direita
       break;
       case 114:
-        //R
       break;
       case 115:
-        //Seta pra baixo
       break;
       case 119:
-        //Seta pra cima
+        cs->SetAccelerating(true);
       break;
       default:
         //caso padrão
@@ -105,20 +103,18 @@ void keyboardUp(int key)
       break;
       case 97:
         //Seta pra esquerda
-        cs->Rotate(-15);
+        cs->SetActive(true);
       break;
       case 100:
         //Seta pra direita
-        cs->Rotate(15);
+        cs->SetActive(false);
       break;
       case 114:
-        //Rthis->FixedAt->x
       break;
       case 115:
-        //Seta pra baixo
       break;
       case 119:
-        //Seta pra cima
+        cs->SetAccelerating(false);
       break;
       default:
         //caso padrão

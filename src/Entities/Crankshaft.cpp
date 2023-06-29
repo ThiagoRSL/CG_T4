@@ -6,6 +6,8 @@ Crankshaft::Crankshaft(float x, float y, float r, float* RGB)
     :Entity(x, y, RGB)
 {
     this->CreateBody(r, RGB);
+    this->cycleSpeed = 0;
+    this->accelerating = false;
 }
 
 void Crankshaft::CreateBody(float r, float* RGB)
@@ -31,8 +33,9 @@ void Crankshaft::CreateBody(float r, float* RGB)
     this->AppendPoly(p1);
     //Termina Vibraquim
 
+
     //Gera P2
-    float p2_l1 = 20;
+    float p2_l1 = 30;
     float p2_l2 = p1_h1*2;
     //Cria centro do Virabrequim
     Poly* p2 = new Poly(this->Anchor->x, this->Anchor->y, RGB);
@@ -45,7 +48,7 @@ void Crankshaft::CreateBody(float r, float* RGB)
     //Termina Vibraquim
 
     //Gera P3
-    float p3_dx = -30; // delta no eixo x
+    float p3_dx = -40; // delta no eixo x
     //Cria centro do Virabrequim
     Poly* p3 = new Poly(this->Anchor->x, this->Anchor->y, RGB);
 
@@ -69,11 +72,19 @@ void Crankshaft::CreateBody(float r, float* RGB)
     }
     this->AppendPoly(p3);
 
+    //Gera P4
+    //Cria centro do Virabrequim
+    Poly* p4 = new Poly(this->Anchor->x, this->Anchor->y, RGB);
+    p4->AddVertex(p1_l/2, p1_h2);
+    p4->AddVertex(p1_l/2, -p1_h2);
+    p4->AddVertex(40 + p1_l/2, -p1_h2+10);
+    p4->AddVertex(40 + p1_l/2, p1_h2-10);
+    this->AppendPoly(p4);
 
     //Termina Vibraquim
 
     //Cria SlotPoint
-    Vec2* p = new Vec2(-p1_l/2 + (-p2_l1), 0);
+    Vec2* p = new Vec2(p1_l/2 + 40, 0);
     this->AppendPoint(p);
     p->SetAnchor(this->Anchor);
     this->SlotPoint = p;
@@ -87,8 +98,26 @@ void Crankshaft::AppendPiston(Piston* pis)
 
 void Crankshaft::Render()
 {
+    if(this->lastFrame != FPSManager::shared_instance().GetFrames())
+    {
+        this->lastFrame = FPSManager::shared_instance().GetFrames();
+        if(accelerating)
+        {
+            cycleSpeed += 0.1;
+        }
+        else
+        {
+            if(cycleSpeed > 0)
+                cycleSpeed -= 0.1;
+            if(cycleSpeed < 0)
+                cycleSpeed = 0;
+        }
+    }
+    if(this->active)
+    {
+        Entity::Rotate((cycleSpeed*360)/FPSManager::shared_instance().GetFrames());
+    }
     Entity::Render();
-
     int i;
     for(i = 0; i < Pistons.size(); i++)
     {

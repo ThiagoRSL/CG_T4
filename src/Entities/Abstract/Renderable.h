@@ -16,6 +16,7 @@ class Renderable
         Pnt2* Anchor;
         Pnt2* CameraOffsetRef;
         bool isStatic;
+        float lastFrame;
 
     public:
 

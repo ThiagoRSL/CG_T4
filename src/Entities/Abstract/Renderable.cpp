@@ -8,4 +8,5 @@ Renderable::Renderable()
     Static(false);
     this->Anchor = nullptr;
     this->Offset = Pnt2(0,0);
+    this->lastFrame = 0;
 }

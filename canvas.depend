@@ -1358,11 +1358,11 @@
 
 1684764394 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\controller\playercontroller.h
 
-1685448140 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.cpp
+1688064177 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.cpp
 	"Renderable.h"
 	"Utils/Vec2.h"
 
-1685448140 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.h
+1688064160 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\abstract\renderable.h
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	"Utils/Pnt2.h"
@@ -1552,7 +1552,7 @@
 	"Vec2.h"
 	"GeometryAux.h"
 
-1688046756 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
+1688065296 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1830,14 +1830,15 @@
 	<Entity.h>
 	"Crankshaft.h"
 
-1688050231 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.h
+1688064713 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.h
+	"FPSManager.h"
 	"Entity.h"
 	"Pnt2.h"
 	"Poly.h"
 	"Curves.h"
 	<vector>
 
-1688049619 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.cpp
+1688066010 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.cpp
 	"Crankshaft.h"
 	"Piston.h"
 
