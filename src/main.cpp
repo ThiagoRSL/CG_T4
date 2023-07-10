@@ -158,9 +158,9 @@ int main(void)
     //Piston* piston = new Piston(cs, 200, RGB);
 
     cs2 = new Crankshaft(400, 0, 50, RGB);
-    Piston* piston2 = new Piston(cs2, 200, RGB);
+    Piston* piston2 = new Piston(cs2, 150, RGB);
     piston2->SetAngle(45/2);
-    piston2 = new Piston(cs2, 200, RGB);
+    piston2 = new Piston(cs2, 150, RGB);
     piston2->SetAngle(-45/2);
 
 

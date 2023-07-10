@@ -66,17 +66,18 @@ void Piston::Render()
     Vec2 vecDiffCrankPiston = Vec2(this->CrankShaft->GetAnchor()->x - this->Anchor->x,this->CrankShaft->GetAnchor()->y - this->Anchor->y);
     Vec2* PistonPos = new Vec2(headPoint.x, headPoint.y);
     Vec2* FixedCopy = FixedAt->GetCopy();
-    PistonPos->RotateDegrees(angle);
-    FixedAt->RotateDegrees(angle);
 
     Poly p = Poly(0, 0, this->background_color);
     p.SetAnchor(this->Anchor);
-    p.AddVertex(PistonPos->x + 5, PistonPos->y); //- (10*cos(angle*PI/180)));
-    p.AddVertex(PistonPos->x - 5, PistonPos->y); //+ (10*cos(angle*PI/180)));
+    p.AddVertex(PistonPos->x + 10, PistonPos->y); //- (10*cos(angle*PI/180)));
+    p.AddVertex(PistonPos->x - 10, PistonPos->y); //+ (10*cos(angle*PI/180)));
     p.AddVertex(FixedAt->x - 10, FixedAt->y);
     p.AddVertex(FixedAt->x + 10, FixedAt->y);
     printf("\n TAMANO DO CONNECT ROD (ROTADO): %f", GeometryAux::DistanceBetween(PistonPos->x, PistonPos->y, FixedAt->x, FixedAt->y));
     //p.AddVertex(basePoint.x - 10, basePoint.y);
     //p.AddVertex(basePoint.x + 10, basePoint.y);
+    p.Rotate(angle);
     p.Render();
+    PistonPos->RotateDegrees(angle);
+    FixedAt->RotateDegrees(angle);
 }

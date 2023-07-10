@@ -1552,7 +1552,7 @@
 	"Vec2.h"
 	"GeometryAux.h"
 
-1689000621 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
+1689018733 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1825,7 +1825,7 @@
 	<Entity.h>
 	"Crankshaft.h"
 
-1689006802 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\piston.cpp
+1689018620 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\piston.cpp
 	"Piston.h"
 
 1688999863 c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\piston.h
