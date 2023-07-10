@@ -71,8 +71,8 @@ void Piston::Render()
 
     Poly p = Poly(0, 0, this->background_color);
     p.SetAnchor(this->Anchor);
-    p.AddVertex(PistonPos->x + 10, PistonPos->y);
-    p.AddVertex(PistonPos->x - 10, PistonPos->y);
+    p.AddVertex(PistonPos->x + 5, PistonPos->y); //- (10*cos(angle*PI/180)));
+    p.AddVertex(PistonPos->x - 5, PistonPos->y); //+ (10*cos(angle*PI/180)));
     p.AddVertex(FixedAt->x - 10, FixedAt->y);
     p.AddVertex(FixedAt->x + 10, FixedAt->y);
     printf("\n TAMANO DO CONNECT ROD (ROTADO): %f", GeometryAux::DistanceBetween(PistonPos->x, PistonPos->y, FixedAt->x, FixedAt->y));
