@@ -10,13 +10,19 @@ class Piston : public Entity
     private:
         Crankshaft* CrankShaft;
         Vec2* FixedAt;
-        float pistonHeight;
+        float angle;
+        float radius;
+        Vec2 headPoint;
+        Vec2 basePoint;
         float connectingRodSize;
-        void CalculateHeight();
+        void CalculateHeadPoint();
 
     public:
         Piston(Crankshaft* cs, float connectingRodSize, float* RGB);
         //virtual ~Piston();
+
+
+        void SetAngle(float angle) {this->angle = angle;}
         void Render();
 
 };

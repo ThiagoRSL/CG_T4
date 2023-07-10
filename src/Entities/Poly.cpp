@@ -203,6 +203,7 @@ void Poly::RenderVertexes()
     }
 }
 
+
 bool Poly::HasCollision(float x, float y)
 {
     int i, a;
@@ -272,4 +273,22 @@ Poly* Poly::GetCopy()
         polyCopy->AddVertex(Vertexes.at(i)->GetCopy());
     }
     return polyCopy;
+}
+
+Vec2* Poly::GetRelativePosition()
+{
+    float virtualX, virtualY;
+
+    if(!this->isStatic)
+    {
+        virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
+        virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+    }
+    else
+    {
+        virtualX = StaticOffset.x + Offset.x;
+        virtualY = StaticOffset.y + Offset.y;
+    }
+
+    return new Vec2(virtualX, virtualY);
 }

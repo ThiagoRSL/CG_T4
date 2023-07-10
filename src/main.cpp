@@ -44,6 +44,7 @@ const int CONTROL_POINTS_INCREMENT = 0;
 
 std::set<int> PressedKeys;
 Crankshaft* cs;
+Crankshaft* cs2;
 
 void render()
 {
@@ -83,6 +84,7 @@ void keyboard(int key)
       break;
       case 119:
         cs->SetAccelerating(true);
+        cs2->SetAccelerating(true);
       break;
       default:
         //caso padrão
@@ -104,10 +106,12 @@ void keyboardUp(int key)
       case 97:
         //Seta pra esquerda
         cs->SetActive(true);
+        cs2->SetActive(true);
       break;
       case 100:
         //Seta pra direita
         cs->SetActive(false);
+        cs2->SetActive(false);
       break;
       case 114:
       break;
@@ -115,6 +119,7 @@ void keyboardUp(int key)
       break;
       case 119:
         cs->SetAccelerating(false);
+        cs2->SetAccelerating(false);
       break;
       default:
         //caso padrão
@@ -149,15 +154,18 @@ int main(void)
     float RGB4[3] = {0.75, 0.35, 0.35};
     float RGB5[3] = {0.85, 0.85, 0.85};
 
-    Poly* p1 = new Poly(0, 0, RGB);
-    p1->SetOffset(40, 0);
-
     cs = new Crankshaft(0, 0, 50, RGB);
-    cs->SetOffset(40, 0);
+    //Piston* piston = new Piston(cs, 200, RGB);
 
-    Piston* piston = new Piston(cs, 200, RGB);
+    cs2 = new Crankshaft(400, 0, 50, RGB);
+    Piston* piston2 = new Piston(cs2, 200, RGB);
+    piston2->SetAngle(45/2);
+    piston2 = new Piston(cs2, 200, RGB);
+    piston2->SetAngle(-45/2);
+
 
     RenderManager::shared_instance().AddRenderableToList(cs);
+    RenderManager::shared_instance().AddRenderableToList(cs2);
 
 
     CV::init("Motor de Moto (Harley Davidson)");

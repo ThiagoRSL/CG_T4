@@ -45,11 +45,12 @@ class Poly : public Renderable
 
     public:
 
-        Vec2 GetOrientation(){return Vec2(this->OrientationVector->x, this->OrientationVector->y);}
+        Vec2* GetRelativePosition();
+        Vec2  GetOrientation(){return Vec2(this->OrientationVector->x, this->OrientationVector->y);}
         Vec2* GetOrientationRef(){return this->OrientationVector;}
         Poly* GetCopy();
         Poly* GetPolyParts();
-        void SetShowBorder(bool showBorder){this->show_border = showBorder;}
+        void  SetShowBorder(bool showBorder){this->show_border = showBorder;}
 
 };
 

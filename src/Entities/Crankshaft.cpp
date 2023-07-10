@@ -123,4 +123,19 @@ void Crankshaft::Render()
     {
         Pistons.at(i)->Render();
     }
+    CV::color(4);
+
+    float virtualX, virtualY;
+
+    if(!this->isStatic)
+    {
+        virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
+        virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+    }
+    else
+    {
+        virtualX = StaticOffset.x + Offset.x;
+        virtualY = StaticOffset.y + Offset.y;
+    }
+    CV::circle(virtualX+SlotPoint->x , virtualY+SlotPoint->y, 30, 30);
 }

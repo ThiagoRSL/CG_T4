@@ -128,6 +128,23 @@ void Entity::SetFirstPosition(Poly* part)
     }
 }
 
+Vec2* Entity::GetRelativePosition()
+{
+    float virtualX, virtualY;
+
+    if(!this->isStatic)
+    {
+        virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
+        virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+    }
+    else
+    {
+        virtualX = StaticOffset.x + Offset.x;
+        virtualY = StaticOffset.y + Offset.y;
+    }
+
+    return new Vec2(virtualX, virtualY);
+}
 
 void Entity::Render()
 {
