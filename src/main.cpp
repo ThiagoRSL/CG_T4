@@ -111,16 +111,17 @@ void keyboardUp(int key)
           cs->SetAccelerating(false);
       break;
       case 49://1
-        //Piston::show_cranks
+        RenderManager::shared_instance().show_crankshaft = !RenderManager::shared_instance().show_crankshaft;
       break;
       case 50://2
-        //Seta pra esquerda
+        RenderManager::shared_instance().show_connectionRod = !RenderManager::shared_instance().show_connectionRod;
       break;
       case 51://3
-        //Seta pra esquerda
+        RenderManager::shared_instance().show_piston = !RenderManager::shared_instance().show_piston;
       break;
       case 52://4
-        //Seta pra esquerda
+        RenderManager::shared_instance().show_piston_tube = !RenderManager::shared_instance().show_piston_tube;
+        RenderManager::shared_instance().show_effects = !RenderManager::shared_instance().show_effects;
       break;
       case 200:
         angle_between_pistons += 1;
@@ -165,6 +166,12 @@ int main(void)
     float RGB3[3] = {0.75, 0.75, 0.0};
     float RGB4[3] = {0.75, 0.35, 0.35};
     float RGB5[3] = {0.85, 0.85, 0.85};
+
+    RenderManager::shared_instance().show_crankshaft = true;
+    RenderManager::shared_instance().show_connectionRod = true;
+    RenderManager::shared_instance().show_piston = true;
+    RenderManager::shared_instance().show_piston_tube = true;
+    RenderManager::shared_instance().show_effects = true;
 
     //cs = new Crankshaft(0, 0, 50, RGB);
     //Piston* piston = new Piston(cs, 200, RGB);

@@ -18,6 +18,12 @@ class RenderManager
         std::vector<Renderable*> renderList;
 
     public:
+        bool show_crankshaft;
+        bool show_connectionRod;
+        bool show_piston;
+        bool show_piston_tube;
+        bool show_effects;
+
         static const int RENDER_DISTANCE = 2500;
         static RenderManager &shared_instance() {static RenderManager renderManager; return renderManager;}
         RenderManager();

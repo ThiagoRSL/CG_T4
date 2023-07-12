@@ -117,7 +117,9 @@ void Crankshaft::Render()
     {
         Entity::Rotate((cycleSpeed*360)/FPSManager::shared_instance().GetFrames());
     }
-    Entity::Render();
+
+    if(RenderManager::shared_instance().show_crankshaft) Entity::Render();
+
     int i;
     for(i = 0; i < Pistons.size(); i++)
     {

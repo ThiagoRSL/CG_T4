@@ -7,6 +7,8 @@
 
 class Piston : public Entity
 {
+    public:
+
     private:
         Crankshaft* CrankShaft;
         Vec2* FixedAt;

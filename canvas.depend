@@ -1662,7 +1662,7 @@
 	"Managers/CameraManager.h"
 	"Utils/GeometryAux.h"
 
-1687983522 c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.h
+1689191569 c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.h
 	<stdlib.h>
 	<algorithm>
 	<iostream>
@@ -1698,7 +1698,7 @@
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1689174507 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
+1689191540 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1806,7 +1806,7 @@
 1687986710 c:\users\nektus\desktop\cg\cg_t4\src\entities\motor.h
 	"Utils/Pnt2.h"
 
-1689032366 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
+1689191476 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
 	"Crankshaft.h"
 	"Piston.h"
 
@@ -1821,7 +1821,7 @@
 1689190616 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.cpp
 	"Piston.h"
 
-1689171710 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
+1689191435 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
 	<Entity.h>
 	"Crankshaft.h"
 

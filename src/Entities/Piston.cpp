@@ -149,8 +149,8 @@ void Piston::Render()
     e.SetAnchor(this->Anchor);
     e.AddVertex(PistonPos->x + pistonSize/2, minHeight - pistonSize/2 - 10); //- (10*cos(angle*PI/180)));
     e.AddVertex(PistonPos->x - pistonSize/2, minHeight - pistonSize/2 - 10); //+ (10*cos(angle*PI/180)));
-    e.AddVertex(PistonPos->x - pistonSize/2, PistonPos->y + pistonSize/2);
-    e.AddVertex(PistonPos->x + pistonSize/2, PistonPos->y + pistonSize/2);
+    e.AddVertex(PistonPos->x - pistonSize/2, PistonPos->y - pistonSize/2);
+    e.AddVertex(PistonPos->x + pistonSize/2, PistonPos->y - pistonSize/2);
     if(stage == 1)
         e.SetBackgroundColor(nothingColor);
     else if(stage == 2) // COmprime e estora
@@ -167,12 +167,25 @@ void Piston::Render()
     c3.Rotate(angle);
     e.Rotate(angle);
 
-    e.Render();
-    p.Render();
-    p2.Render();
-    c.Render();
-    c2.Render();
-    c3.Render();
+    if(RenderManager::shared_instance().show_piston_tube)
+    {
+        c.Render();
+        c2.Render();
+        c3.Render();
+    }
+    if(RenderManager::shared_instance().show_effects)
+    {
+        e.Render();
+    }
+
+    if(RenderManager::shared_instance().show_connectionRod)
+    {
+        p.Render();
+    }
+    if(RenderManager::shared_instance().show_piston)
+    {
+        p2.Render();
+    }
     PistonPos->RotateDegrees(angle);
     FixedAt->RotateDegrees(angle);
 }
