@@ -68,6 +68,12 @@ void Piston::CalculateHeadPoint()
 
 void Piston::Render()
 {
+    float tubeColor[3] = {0.75, 0.75, 0.75};
+    float nothingColor[3] = {0.3, 0.9, 0.9};
+    float fuelColor[3] = {0, 0.5, 1};
+    float explosionColor[3] = {1, 0.5, 0};
+    float exaustionColor[3] = {0.5, 0.5, 0.5};
+    float partsColor[3] = {0.3,0.3,0.3};
     float virtualX, virtualY;
     if(!this->isStatic)
     {
@@ -100,6 +106,7 @@ void Piston::Render()
     p.AddVertex(PistonPos->x - 10, PistonPos->y); //+ (10*cos(angle*PI/180)));
     p.AddVertex(FixedAt->x - 10, FixedAt->y);
     p.AddVertex(FixedAt->x + 10, FixedAt->y);
+    p.SetBackgroundColor(partsColor);
     //printf("\n TAMANO DO CONNECT ROD (ROTADO): %f", GeometryAux::DistanceBetween(PistonPos->x, PistonPos->y, FixedAt->x, FixedAt->y));
 
     //Pistão
@@ -109,12 +116,8 @@ void Piston::Render()
     p2.AddVertex(PistonPos->x - pistonSize/2, PistonPos->y + pistonSize/2); //+ (10*cos(angle*PI/180)));
     p2.AddVertex(PistonPos->x - pistonSize/2, PistonPos->y - pistonSize/2);
     p2.AddVertex(PistonPos->x + pistonSize/2, PistonPos->y - pistonSize/2);
+    p2.SetBackgroundColor(partsColor);
 
-    float tubeColor[3] = {0.75, 0.75, 0.75};
-    float nothingColor[3] = {0.3, 0.9, 0.9};
-    float fuelColor[3] = {0, 0.5, 1};
-    float explosionColor[3] = {1, 0.5, 0};
-    float exaustionColor[3] = {0.5, 0.5, 0.5};
     //Camisa
     Poly c = Poly(0, 0, this->background_color);
     c.SetAnchor(this->Anchor);

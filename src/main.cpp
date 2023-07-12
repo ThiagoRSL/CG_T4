@@ -148,6 +148,19 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
     //printf("\nmouse %d %d %d %d %d %d", button, state, wheel, direction,  x, y);
 
+    if(wheel == 0)
+    {
+        if(direction == 1)
+        {
+            angle_between_pistons += 1;
+        }
+        else if(direction == -1)
+        {
+            angle_between_pistons -= 1;
+        }
+
+        UpdateAngle();
+    }
     if(UIManager::shared_instance().CheckInteraction(x, y))
     {
         return;
@@ -166,6 +179,7 @@ int main(void)
     float RGB3[3] = {0.75, 0.75, 0.0};
     float RGB4[3] = {0.75, 0.35, 0.35};
     float RGB5[3] = {0.85, 0.85, 0.85};
+    float csColor[3] = {0.3,0.3,0.3};
 
     RenderManager::shared_instance().show_crankshaft = true;
     RenderManager::shared_instance().show_connectionRod = true;
@@ -177,6 +191,7 @@ int main(void)
     //Piston* piston = new Piston(cs, 200, RGB);
 
     cs = new Crankshaft(400, 0, 50, RGB);
+    cs->SetBackgroundColor(csColor);
     piston1 = new Piston(cs, 150, RGB);
     piston1->SetAngle(-angle_between_pistons/2);
     piston2 = new Piston(cs, 150, RGB);
