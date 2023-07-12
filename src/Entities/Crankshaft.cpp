@@ -12,6 +12,8 @@ Crankshaft::Crankshaft(float x, float y, float r, float* RGB)
 
 void Crankshaft::CreateBody(float r, float* RGB)
 {
+    float partsColor[3] = {0.3,0.3,0.3};
+    this->SetBackgroundColor(partsColor);
     float radius = 50.0;
     float angInit = -(PI/2);
     float angMax = (PI/2);
@@ -30,6 +32,7 @@ void Crankshaft::CreateBody(float r, float* RGB)
 
     p1->AddVertex(p1_l/2, p1_h2);
     p1->AddVertex(p1_l/2, -p1_h2);
+    p1->SetBackgroundColor(partsColor);
     this->AppendPoly(p1);
     //Termina Vibraquim
 
@@ -44,6 +47,7 @@ void Crankshaft::CreateBody(float r, float* RGB)
 
     p2->AddVertex(-p1_l/2 + (-p2_l1), p1_h1);
     p2->AddVertex(-p1_l/2, p1_h1);
+    p2->SetBackgroundColor(partsColor);
     this->AppendPoly(p2);
     //Termina Vibraquim
 
@@ -70,6 +74,7 @@ void Crankshaft::CreateBody(float r, float* RGB)
         curvePoint = curvePoints.at(i);
         p3->AddVertex(curvePoint->x, curvePoint->y);
     }
+    p3->SetBackgroundColor(partsColor);
     this->AppendPoly(p3);
 
     //Gera P4
@@ -79,10 +84,10 @@ void Crankshaft::CreateBody(float r, float* RGB)
     p4->AddVertex(p1_l/2, -p1_h2);
     p4->AddVertex(40 + p1_l/2, -p1_h2+10);
     p4->AddVertex(40 + p1_l/2, p1_h2-10);
+    p4->SetBackgroundColor(partsColor);
     this->AppendPoly(p4);
 
     //Termina Vibraquim
-
     //Cria SlotPoint
     Vec2* p = new Vec2(p1_l/2 + 40, 0);
     this->AppendPoint(p);
@@ -117,27 +122,34 @@ void Crankshaft::Render()
     {
         Entity::Rotate((cycleSpeed*360)/FPSManager::shared_instance().GetFrames());
     }
+    if(RenderManager::shared_instance().perspective_mode)
+        this->Render3D();
+    else
+        this->Render2D();
+}
 
-    if(RenderManager::shared_instance().show_crankshaft) Entity::Render();
+void Crankshaft::Render2D()
+{
+
+    if(RenderManager::shared_instance().show_crankshaft)
+    {
+        Entity::Render();
+    }
 
     int i;
     for(i = 0; i < Pistons.size(); i++)
     {
         Pistons.at(i)->Render();
     }
-    CV::color(4);
+}
 
-    float virtualX, virtualY;
+void Crankshaft::Render3D()
+{
 
-    if(!this->isStatic)
+
+    int i;
+    for(i = 0; i < Pistons.size(); i++)
     {
-        virtualX = Anchor->x + Offset.x - CameraOffsetRef->x;
-        virtualY = Anchor->y + Offset.y - CameraOffsetRef->y;
+        Pistons.at(i)->Render();
     }
-    else
-    {
-        virtualX = StaticOffset.x + Offset.x;
-        virtualY = StaticOffset.y + Offset.y;
-    }
-    CV::circle(virtualX+SlotPoint->x , virtualY+SlotPoint->y, 30, 30);
 }

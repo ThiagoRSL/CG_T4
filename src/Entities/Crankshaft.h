@@ -31,6 +31,8 @@ class Crankshaft : public Entity
         void SetFrequencyCycle(float cycleSpeed) {this->cycleSpeed = cycleSpeed;}
         void AppendPiston(Piston* pis);
         void Render();
+        void Render2D();
+        void Render3D();
 };
 
 

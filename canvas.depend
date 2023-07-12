@@ -1662,7 +1662,7 @@
 	"Managers/CameraManager.h"
 	"Utils/GeometryAux.h"
 
-1689191569 c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.h
+1689193562 c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.h
 	<stdlib.h>
 	<algorithm>
 	<iostream>
@@ -1698,7 +1698,7 @@
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1689191540 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
+1689193813 source:c:\users\nektus\desktop\cg\cg_t4\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1771,7 +1771,7 @@
 1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\managers\mousemanager.cpp
 	"MouseManager.h"
 
-1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.cpp
+1689193594 source:c:\users\nektus\desktop\cg\cg_t4\src\managers\rendermanager.cpp
 	"RenderManager.h"
 
 1687983522 source:c:\users\nektus\desktop\cg\cg_t4\src\managers\uimanager.cpp
@@ -1806,11 +1806,11 @@
 1687986710 c:\users\nektus\desktop\cg\cg_t4\src\entities\motor.h
 	"Utils/Pnt2.h"
 
-1689191476 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
+1689194472 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.cpp
 	"Crankshaft.h"
 	"Piston.h"
 
-1688074533 c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.h
+1689192781 c:\users\nektus\desktop\cg\cg_t4\src\entities\crankshaft.h
 	"FPSManager.h"
 	"Entity.h"
 	"Pnt2.h"
@@ -1818,10 +1818,10 @@
 	"Curves.h"
 	<vector>
 
-1689192030 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.cpp
+1689192692 source:c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.cpp
 	"Piston.h"
 
-1689191435 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
+1689192640 c:\users\nektus\desktop\cg\cg_t4\src\entities\piston.h
 	<Entity.h>
 	"Crankshaft.h"
 
@@ -1843,4 +1843,23 @@
 1689001507 source:c:\users\thiago\desktop\grad\cg\trabalhos\cg_t4\src\entities\crankshaft.cpp
 	"Crankshaft.h"
 	"Piston.h"
+
+1689120700 source:c:\users\nektus\desktop\cg\cg_t4\src\utils\vec3.cpp
+	"Vec3.h"
+
+1689120868 c:\users\nektus\desktop\cg\cg_t4\src\utils\vec3.h
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+
+1685578148 source:c:\users\nektus\desktop\cg\cg_t4\src\utils\mat.cpp
+	"Mat.h"
+
+1689193744 c:\users\nektus\desktop\cg\cg_t4\src\utils\mat.h
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"gl_canvas2d.h"
+	<stdio.h>
+	"CameraManager.h"
 

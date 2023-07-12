@@ -51,12 +51,9 @@ void render()
 {
     CV::clear(1,1,1);
 
-    //glBegin(GL_LINES);
     FPSManager::shared_instance().UpdateFrames();
     CameraManager::shared_instance().UpdateCameraOffset();
     RenderManager::shared_instance().RenderAll();
-    //UIManager::shared_instance().RenderAll();
-    //if(CollisionManager::shared_instance().ArrivedAtStation())  SetupStage();
 }
 
 void keyboard(int key)
@@ -123,6 +120,9 @@ void keyboardUp(int key)
         RenderManager::shared_instance().show_piston_tube = !RenderManager::shared_instance().show_piston_tube;
         RenderManager::shared_instance().show_effects = !RenderManager::shared_instance().show_effects;
       break;
+      case 112://3
+        RenderManager::shared_instance().perspective_mode = !RenderManager::shared_instance().perspective_mode;
+      break;
       case 200:
         angle_between_pistons += 1;
         UpdateAngle();
@@ -132,7 +132,7 @@ void keyboardUp(int key)
         UpdateAngle();
       break;
       case 119:
-          RenderManager::shared_instance().ToggleShowAnchors();
+          //RenderManager::shared_instance().ToggleShowAnchors();
       break;
       default:
         //caso padrão
@@ -181,11 +181,6 @@ int main(void)
     float RGB5[3] = {0.85, 0.85, 0.85};
     float csColor[3] = {0.3,0.3,0.3};
 
-    RenderManager::shared_instance().show_crankshaft = true;
-    RenderManager::shared_instance().show_connectionRod = true;
-    RenderManager::shared_instance().show_piston = true;
-    RenderManager::shared_instance().show_piston_tube = true;
-    RenderManager::shared_instance().show_effects = true;
 
     //cs = new Crankshaft(0, 0, 50, RGB);
     //Piston* piston = new Piston(cs, 200, RGB);

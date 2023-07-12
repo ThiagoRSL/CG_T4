@@ -23,6 +23,12 @@ class RenderManager
         bool show_piston;
         bool show_piston_tube;
         bool show_effects;
+        bool perspective_mode;
+
+        float RotAngleX;
+        float RotAngleY;
+        float RotAngleZ;
+        float perspective_d;
 
         static const int RENDER_DISTANCE = 2500;
         static RenderManager &shared_instance() {static RenderManager renderManager; return renderManager;}

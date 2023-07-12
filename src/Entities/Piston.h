@@ -30,6 +30,8 @@ class Piston : public Entity
 
         void SetAngle(float angle) {this->angle = angle;}
         void Render();
+        void Render2D();
+        void Render3D();
 
 };
 

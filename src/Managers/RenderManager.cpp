@@ -3,6 +3,19 @@
 RenderManager::RenderManager()
 {
     this->showAnchors = false;
+
+    this->show_crankshaft = true;
+    this->show_connectionRod = true;
+    this->show_piston = true;
+    this->show_piston_tube = true;
+    this->show_effects = true;
+
+    this->RotAngleX = 0;
+    this->RotAngleY = 0;
+    this->RotAngleZ = 0;
+    this->perspective_d = 15;
+
+    this->perspective_mode = false;
 }
 
 void RenderManager::RenderAll()

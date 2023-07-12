@@ -68,6 +68,14 @@ void Piston::CalculateHeadPoint()
 
 void Piston::Render()
 {
+    if(RenderManager::shared_instance().perspective_mode)
+        this->Render3D();
+    else
+        this->Render2D();
+}
+
+void Piston::Render2D()
+{
     float tubeColor[3] = {0.75, 0.75, 0.75};
     float nothingColor[3] = {0.3, 0.9, 0.9};
     float fuelColor[3] = {0, 0.5, 1};
@@ -191,4 +199,9 @@ void Piston::Render()
     }
     PistonPos->RotateDegrees(angle);
     FixedAt->RotateDegrees(angle);
+}
+
+void Piston::Render3D()
+{
+
 }
