@@ -35,6 +35,7 @@ class Poly : public Renderable
         float border_color[4];
         float rotation;
         bool show_border;
+        //bool fill_poly;
 
         Vec2* OrientationVector;
         std::vector<Vec2*> Vertexes;

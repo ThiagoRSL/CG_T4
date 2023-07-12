@@ -44,7 +44,8 @@ const int CONTROL_POINTS_INCREMENT = 0;
 
 std::set<int> PressedKeys;
 Crankshaft* cs;
-Crankshaft* cs2;
+float angle_between_pistons = 60;
+Piston *piston1, *piston2;
 
 void render()
 {
@@ -70,7 +71,7 @@ void keyboard(int key)
     switch(key)
     {
       case 32:
-          //ESPAÇO
+        cs->SetAccelerating(true);
       break;
       case 97:
         //Seta pra esquerda
@@ -82,14 +83,20 @@ void keyboard(int key)
       break;
       case 115:
       break;
-      case 119:
-        cs->SetAccelerating(true);
-        cs2->SetAccelerating(true);
-      break;
       default:
         //caso padrão
         break;
     }
+}
+
+void UpdateAngle()
+{
+    if(angle_between_pistons > 110)
+        angle_between_pistons = 110;
+    else if(angle_between_pistons < 60)
+        angle_between_pistons = 60;
+    piston1->SetAngle(-angle_between_pistons/2);
+    piston2->SetAngle(angle_between_pistons/2);
 }
 
 //funcao chamada toda vez que uma tecla for liberada
@@ -101,25 +108,30 @@ void keyboardUp(int key)
     switch(key)
     {
       case 32:
-          RenderManager::shared_instance().ToggleShowAnchors();
+          cs->SetAccelerating(false);
       break;
-      case 97:
+      case 49://1
+        //Piston::show_cranks
+      break;
+      case 50://2
         //Seta pra esquerda
-        cs->SetActive(true);
-        cs2->SetActive(true);
       break;
-      case 100:
-        //Seta pra direita
-        cs->SetActive(false);
-        cs2->SetActive(false);
+      case 51://3
+        //Seta pra esquerda
       break;
-      case 114:
+      case 52://4
+        //Seta pra esquerda
       break;
-      case 115:
+      case 200:
+        angle_between_pistons += 1;
+        UpdateAngle();
+      break;
+      case 202:
+        angle_between_pistons -= 1;
+        UpdateAngle();
       break;
       case 119:
-        cs->SetAccelerating(false);
-        cs2->SetAccelerating(false);
+          RenderManager::shared_instance().ToggleShowAnchors();
       break;
       default:
         //caso padrão
@@ -154,18 +166,18 @@ int main(void)
     float RGB4[3] = {0.75, 0.35, 0.35};
     float RGB5[3] = {0.85, 0.85, 0.85};
 
-    cs = new Crankshaft(0, 0, 50, RGB);
+    //cs = new Crankshaft(0, 0, 50, RGB);
     //Piston* piston = new Piston(cs, 200, RGB);
 
-    cs2 = new Crankshaft(400, 0, 50, RGB);
-    Piston* piston2 = new Piston(cs2, 150, RGB);
-    piston2->SetAngle(45/2);
-    piston2 = new Piston(cs2, 150, RGB);
-    piston2->SetAngle(-45/2);
+    cs = new Crankshaft(400, 0, 50, RGB);
+    piston1 = new Piston(cs, 150, RGB);
+    piston1->SetAngle(-angle_between_pistons/2);
+    piston2 = new Piston(cs, 150, RGB);
+    piston2->SetAngle(angle_between_pistons/2);
 
+    cs->SetActive(true);
 
     RenderManager::shared_instance().AddRenderableToList(cs);
-    RenderManager::shared_instance().AddRenderableToList(cs2);
 
 
     CV::init("Motor de Moto (Harley Davidson)");

@@ -12,11 +12,15 @@ class Piston : public Entity
         Vec2* FixedAt;
         float angle;
         float radius;
+        float maxHeight;
+        float minHeight;
+        float pistonSize;
+        int stage;
         Vec2 headPoint;
         Vec2 basePoint;
         float connectingRodSize;
         void CalculateHeadPoint();
-
+        void NextStage();
     public:
         Piston(Crankshaft* cs, float connectingRodSize, float* RGB);
         //virtual ~Piston();
